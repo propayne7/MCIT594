@@ -72,7 +72,6 @@ public class MyArrayList<E> {
      */
     public E remove(int index) {
         boolean outOfBounds = false;
-        // adding error handling so that an Integer can be passed to an integer arraylist to remove the specific integer instead of the index
         if (index < 0 || index >= size) {
             throw new IndexOutOfBoundsException();
         }
@@ -90,11 +89,8 @@ public class MyArrayList<E> {
      */
     public boolean remove(E obj) {
         Boolean result = false;
-        System.out.println(obj.getClass().getName());
         for(int i = 0; i < data.length; i++){
-            System.out.println("Value in array: " + data[i] + ", Value passed to remove method: " + obj);
             if(data[i].equals(obj)){
-                System.out.println("Item: " + obj + " exists in array.");
                 remove(i);
                 return true;
             }
