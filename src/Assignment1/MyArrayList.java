@@ -78,6 +78,7 @@ public class MyArrayList<E> {
             data[i] = data[i + 1];
         }
         size--;
+        shrinkArray();
         return target;
     }
 
@@ -107,7 +108,6 @@ public class MyArrayList<E> {
 
     public boolean contains(E obj) {
         for (int i = 0; i < size; i++) {
-            System.out.println("Contains index: " + i);
             if (data[i] != null && data[i].equals(obj))
                 return true;
         }
@@ -131,10 +131,10 @@ public class MyArrayList<E> {
 
         if(ratio <= .25){
             int shrinkToSize = Math.round((int) denominator / 2);
-            System.out.println("Shrinking from size: " + data.length + " to size: " + shrinkToSize);
-//            E[] newData = (E[]) new Object[shrinkToSize];
-//            System.arraycopy(data, 0, newData, 0, shrinkToSize);
-//            data = newData;
+            E[] newData = (E[]) new Object[shrinkToSize];
+            System.arraycopy(data, 0, newData, 0, shrinkToSize);
+            data = newData;
+            size = shrinkToSize;
         }
     }
     // method counts the elements in the array that are not null

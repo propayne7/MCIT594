@@ -18,7 +18,7 @@ public class MyArrayListRunner {
 
         intList.print();
 
-        intList.remove(Integer.valueOf(30));
+        intList.remove(2);
 
         System.out.println();
         System.out.println();
