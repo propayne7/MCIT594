@@ -28,8 +28,7 @@ public class MyArrayList<E> {
     public E get(int index) {
         if (index < 0 || index >= size) {
             throw new IndexOutOfBoundsException();
-        }
-        else return data[index];
+        } else return data[index];
     }
 
     private void increaseCapacity() {
@@ -58,8 +57,8 @@ public class MyArrayList<E> {
         if (size == data.length) {
             increaseCapacity();
         }
-        for (int i = size-1; i >= index; i--) {
-            data[i+1] = data[i];
+        for (int i = size - 1; i >= index; i--) {
+            data[i + 1] = data[i];
         }
         data[index] = element;
         size++;
@@ -71,7 +70,6 @@ public class MyArrayList<E> {
     okay, as long as the parameters are different. This gave me hell in MCIT 591, but I think I've figured it out now.
      */
     public E remove(int index) {
-        boolean outOfBounds = false;
         if (index < 0 || index >= size) {
             throw new IndexOutOfBoundsException();
         }
@@ -88,11 +86,11 @@ public class MyArrayList<E> {
      * Need to implement this in Step 2.
      */
     public boolean remove(E obj) {
-        boolean result = false;
-        if(contains(obj)){
-            for(int i = 0; i < data.length; i++){
-                if(data[i].equals(obj)){
-                    remove(i);
+        if (contains(obj)) {
+            for (int i = 0; i < data.length; i++) {
+                if (data[i].equals(obj)) {
+                    data[i] = null;
+                    shrinkArray();
                     return true;
                 }
             }
@@ -109,7 +107,8 @@ public class MyArrayList<E> {
 
     public boolean contains(E obj) {
         for (int i = 0; i < size; i++) {
-            if (data[i].equals(obj))
+            System.out.println("Contains index: " + i);
+            if (data[i] != null && data[i].equals(obj))
                 return true;
         }
         return false;
@@ -120,5 +119,32 @@ public class MyArrayList<E> {
      */
     public E set(int index, E obj) {
         return null;
+    }
+
+    /****************************************************
+     The below methods implement Step 3 of the Assignment.
+     ****************************************************/
+    private void shrinkArray() {
+        int numerator = countNonNulls();
+        int denominator = data.length;
+        double ratio = numerator / denominator;
+
+        if(ratio <= .25){
+            int shrinkToSize = Math.round((int) denominator / 2);
+            System.out.println("Shrinking from size: " + data.length + " to size: " + shrinkToSize);
+//            E[] newData = (E[]) new Object[shrinkToSize];
+//            System.arraycopy(data, 0, newData, 0, shrinkToSize);
+//            data = newData;
+        }
+    }
+    // method counts the elements in the array that are not null
+    public int countNonNulls() {
+        int count = 0;
+        for (int i = 0; i < data.length; i++) {
+            if (data[i] != null ) {
+                count++;
+            }
+        }
+        return count;
     }
 }
