@@ -88,13 +88,16 @@ public class MyArrayList<E> {
      * Need to implement this in Step 2.
      */
     public boolean remove(E obj) {
-        Boolean result = false;
-        for(int i = 0; i < data.length; i++){
-            if(data[i].equals(obj)){
-                remove(i);
-                return true;
+        boolean result = false;
+        if(contains(obj)){
+            for(int i = 0; i < data.length; i++){
+                if(data[i].equals(obj)){
+                    remove(i);
+                    return true;
+                }
             }
         }
+
         return false;
     }
 
