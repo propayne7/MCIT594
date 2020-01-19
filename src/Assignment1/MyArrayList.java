@@ -21,7 +21,7 @@ public class MyArrayList<E> {
     /*
      * Need to implement this in step 5
      */
-    public MyArrayList(String[] arr) {
+    public MyArrayList(E[] arr) {
 
     }
 
