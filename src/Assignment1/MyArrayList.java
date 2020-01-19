@@ -15,13 +15,13 @@ public class MyArrayList<E> {
     protected int size = 0;
 
     public MyArrayList() {
-        data = (E[]) new String[INITIAL_CAPACITY];
+        data = (E[]) new Object[INITIAL_CAPACITY];
     }
 
     /*
      * Need to implement this in step 5
      */
-    public MyArrayList(E[] arr) {
+    public MyArrayList(String[] arr) {
 
     }
 
@@ -83,20 +83,8 @@ public class MyArrayList<E> {
     /*
      * Need to implement this in Step 2.
      */
-    public boolean remove(E obj) {
-        // create variable to handle trigger of arrayShift method
-        for(int i = 0; i < data.length; i++){
-            if(data[i].equals(obj)){
-                data[i] = null;
-            } else {
-                return false;
-            }
-
-
-        }
-
-
-        return true;
+    public boolean remove(String obj) {
+        return false;
     }
 
     public void print() {
@@ -105,7 +93,7 @@ public class MyArrayList<E> {
         }
     }
 
-    public boolean contains(E obj) {
+    public boolean contains(String obj) {
         for (int i = 0; i < size; i++) {
             if (data[i].equals(obj))
                 return true;
@@ -116,11 +104,7 @@ public class MyArrayList<E> {
     /*
      * Need to implement this in Step 4
      */
-    public E set(int index, E obj) {
+    public String set(int index, String obj) {
         return null;
-    }
-
-    public int size(){
-        return data.length;
     }
 }
