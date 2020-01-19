@@ -2,6 +2,10 @@ package Assignment1;
 
 public class MyArrayListRunner {
     public static void main(String[] args) {
-        System.out.println("Test");
+        MyArrayList<Integer> intList = new MyArrayList<>();
+
+        intList.increaseCapacity;
+
+
     }
 }

@@ -44,14 +44,14 @@ public class MyArrayList<E> {
      * DO NOT OTHERWISE CHANGE THIS METHOD
      * as it is used in testing your code.
      */
-    public void add(String value) {
+    public void add(E value) {
         if (size == data.length) {
             increaseCapacity();
         }
         data[size++] = value;
     }
 
-    public void add(int index, String element) {
+    public void add(int index, E element) {
         if (index < 0 || index >= size) {
             throw new IndexOutOfBoundsException();
         }
