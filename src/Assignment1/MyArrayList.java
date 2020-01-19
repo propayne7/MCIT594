@@ -33,7 +33,7 @@ public class MyArrayList<E> {
     }
 
     private void increaseCapacity() {
-        E[] newData = (E[]) new String[2 * data.length];
+        E[] newData = (E[]) new Object[2 * data.length];
         System.arraycopy(data, 0, newData, 0, size);
         data = newData;
     }
@@ -83,7 +83,7 @@ public class MyArrayList<E> {
     /*
      * Need to implement this in Step 2.
      */
-    public boolean remove(String obj) {
+    public boolean remove(E obj) {
         return false;
     }
 
@@ -93,7 +93,7 @@ public class MyArrayList<E> {
         }
     }
 
-    public boolean contains(String obj) {
+    public boolean contains(E obj) {
         for (int i = 0; i < size; i++) {
             if (data[i].equals(obj))
                 return true;
@@ -104,7 +104,7 @@ public class MyArrayList<E> {
     /*
      * Need to implement this in Step 4
      */
-    public String set(int index, String obj) {
+    public E set(int index, E obj) {
         return null;
     }
 }
