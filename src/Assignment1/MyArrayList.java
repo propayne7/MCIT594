@@ -11,11 +11,11 @@ public class MyArrayList<E> {
      *  These are protected so that test cases can access them.
      *  Please do not change the visibility of these fields!
      */
-    protected String[] data;
+    protected E[] data;
     protected int size = 0;
 
     public MyArrayList() {
-        data = new String[INITIAL_CAPACITY];
+        data = (E[]) new String[INITIAL_CAPACITY];
     }
 
     /*
@@ -25,7 +25,7 @@ public class MyArrayList<E> {
 
     }
 
-    public String get(int index) {
+    public E get(int index) {
         if (index < 0 || index >= size) {
             throw new IndexOutOfBoundsException();
         }
@@ -33,7 +33,7 @@ public class MyArrayList<E> {
     }
 
     private void increaseCapacity() {
-        String[] newData = new String[2 * data.length];
+        E[] newData = (E[]) new String[2 * data.length];
         System.arraycopy(data, 0, newData, 0, size);
         data = newData;
     }
@@ -67,11 +67,11 @@ public class MyArrayList<E> {
 
 
 
-    public String remove(int index) {
+    public E remove(int index) {
         if (index < 0 || index >= size) {
             throw new IndexOutOfBoundsException();
         }
-        String target = data[index];
+        E target = data[index];
         for (int i = index; i < size - 1; i++) {
             data[i] = data[i + 1];
         }
@@ -83,7 +83,7 @@ public class MyArrayList<E> {
     /*
      * Need to implement this in Step 2.
      */
-    public boolean remove(String obj) {
+    public boolean remove(E obj) {
         return false;
     }
 
@@ -104,7 +104,7 @@ public class MyArrayList<E> {
     /*
      * Need to implement this in Step 4
      */
-    public String set(int index, String obj) {
+    public E set(int index, E obj) {
         return null;
     }
 
