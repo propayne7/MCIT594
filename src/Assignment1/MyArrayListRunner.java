@@ -6,5 +6,6 @@ public class MyArrayListRunner {
         MyArrayList<Boolean> boolList = new MyArrayList<>();
         MyArrayList<String> stringList = new MyArrayList<>();
 
+
     }
 }

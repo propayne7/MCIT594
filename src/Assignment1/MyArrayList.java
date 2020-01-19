@@ -84,7 +84,19 @@ public class MyArrayList<E> {
      * Need to implement this in Step 2.
      */
     public boolean remove(E obj) {
-        return false;
+        // create variable to handle trigger of arrayShift method
+        for(int i = 0; i < data.length; i++){
+            if(data[i].equals(obj)){
+                data[i] = null;
+            } else {
+                return false;
+            }
+
+
+        }
+
+
+        return true;
     }
 
     public void print() {
@@ -93,7 +105,7 @@ public class MyArrayList<E> {
         }
     }
 
-    public boolean contains(String obj) {
+    public boolean contains(E obj) {
         for (int i = 0; i < size; i++) {
             if (data[i].equals(obj))
                 return true;
@@ -108,4 +120,7 @@ public class MyArrayList<E> {
         return null;
     }
 
+    public int size(){
+        return data.length;
+    }
 }

@@ -2,8 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="e37c98c1-a5d0-4b1d-8f22-f3dedd52880e" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/Assignment1/MyArrayListTemplateCode.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/MCIT594/Assignment1/MyArrayList.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/MCIT594/Assignment1/MyArrayList.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/MCIT594/Assignment1/MyArrayListRunner.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/MCIT594/Assignment1/MyArrayListRunner.class" afterDir="false" />
@@ -82,7 +80,7 @@
       <option name="presentableId" value="Default" />
       <updated>1579402494733</updated>
       <workItem from="1579402509966" duration="2773000" />
-      <workItem from="1579460020471" duration="1032000" />
+      <workItem from="1579460020471" duration="3076000" />
     </task>
     <servers />
   </component>
