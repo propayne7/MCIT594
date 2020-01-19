@@ -66,8 +66,13 @@ public class MyArrayList<E> {
     }
 
 
-
+    /*
+    Note to self: having two methods both with the same name, but having different signatures, is
+    okay, as long as the parameters are different. This gave me hell in MCIT 591, but I think I've figured it out now.
+     */
     public E remove(int index) {
+        boolean outOfBounds = false;
+        // adding error handling so that an Integer can be passed to an integer arraylist to remove the specific integer instead of the index
         if (index < 0 || index >= size) {
             throw new IndexOutOfBoundsException();
         }
@@ -84,6 +89,16 @@ public class MyArrayList<E> {
      * Need to implement this in Step 2.
      */
     public boolean remove(E obj) {
+        Boolean result = false;
+        System.out.println(obj.getClass().getName());
+        for(int i = 0; i < data.length; i++){
+            System.out.println("Value in array: " + data[i] + ", Value passed to remove method: " + obj);
+            if(data[i].equals(obj)){
+                System.out.println("Item: " + obj + " exists in array.");
+                remove(i);
+                return true;
+            }
+        }
         return false;
     }
 
