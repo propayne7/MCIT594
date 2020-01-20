@@ -118,7 +118,16 @@ public class MyArrayList<E> {
      * Need to implement this in Step 4
      */
     public E set(int index, E obj) {
-        return null;
+        if (index < 0 || index >= size) {
+            throw new IndexOutOfBoundsException();
+        }
+
+        E originalValue = data[index];
+
+        data[index] = obj;
+
+
+        return originalValue;
     }
 
     /****************************************************

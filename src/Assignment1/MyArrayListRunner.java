@@ -18,7 +18,9 @@ public class MyArrayListRunner {
 
         intList.print();
 
-        intList.remove(2);
+        int originalValue = intList.set(1,100);
+
+        System.out.println("Original value: " + originalValue);
 
         System.out.println();
         System.out.println();
