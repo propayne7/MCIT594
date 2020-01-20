@@ -18,11 +18,14 @@ public class MyArrayList<E> {
         data = (E[]) new Object[INITIAL_CAPACITY];
     }
 
+
     /*
      * Need to implement this in step 5
      */
     public MyArrayList(E[] arr) {
-
+        data = (E[]) new Object[arr.length];
+        System.arraycopy(arr, 0, data, 0, data.length);
+        size = data.length;
     }
 
     public E get(int index) {
