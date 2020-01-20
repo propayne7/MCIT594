@@ -2,7 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="e37c98c1-a5d0-4b1d-8f22-f3dedd52880e" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/src/Assignment1/ArrayListConstructorTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Assignment1/ArrayListRemoveElementTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Assignment1/ArrayListShrinkTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MCIT594.iml" beforeDir="false" afterPath="$PROJECT_DIR$/MCIT594.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/MCIT594/Assignment1/MyArrayList.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/MCIT594/Assignment1/MyArrayList.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Assignment1/MyArrayList.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Assignment1/MyArrayList.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Assignment1/MyArrayListRunner.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Assignment1/MyArrayListRunner.java" afterDir="false" />
@@ -26,6 +30,10 @@
   <component name="ProjectId" id="1WazSgBWBv83ILf4gvWLWBWV63W" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="PropertiesComponent">
+    <property name="Downloaded.Files.Path.Enabled" value="false" />
+    <property name="Repository.Attach.Annotations" value="false" />
+    <property name="Repository.Attach.JavaDocs" value="false" />
+    <property name="Repository.Attach.Sources" value="false" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
     <property name="node.js.detected.package.eslint" value="true" />
@@ -49,7 +57,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager">
+  <component name="RunManager" selected="JUnit.ArrayListRemoveElementTest">
     <configuration name="MyArrayListRunner" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="Assignment1.MyArrayListRunner" />
       <module name="MCIT594" />
@@ -59,6 +67,57 @@
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="ArrayListConstructorTest" type="JUnit" factoryName="JUnit" nameIsGenerated="true">
+      <module name="MCIT594" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="Assignment1.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="Assignment1" />
+      <option name="MAIN_CLASS_NAME" value="Assignment1.ArrayListConstructorTest" />
+      <option name="METHOD_NAME" value="" />
+      <option name="TEST_OBJECT" value="class" />
+      <option name="PARAMETERS" value="" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="ArrayListRemoveElementTest" type="JUnit" factoryName="JUnit" nameIsGenerated="true">
+      <module name="MCIT594" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="Assignment1.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="Assignment1" />
+      <option name="MAIN_CLASS_NAME" value="Assignment1.ArrayListRemoveElementTest" />
+      <option name="METHOD_NAME" value="" />
+      <option name="TEST_OBJECT" value="class" />
+      <option name="PARAMETERS" value="" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="ArrayListShrinkTest" type="JUnit" factoryName="JUnit" nameIsGenerated="true">
+      <module name="MCIT594" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="Assignment1.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="Assignment1" />
+      <option name="MAIN_CLASS_NAME" value="Assignment1.ArrayListShrinkTest" />
+      <option name="METHOD_NAME" value="" />
+      <option name="TEST_OBJECT" value="class" />
+      <option name="PARAMETERS" value="" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -82,7 +141,7 @@
       <workItem from="1579402509966" duration="2773000" />
       <workItem from="1579460020471" duration="4107000" />
       <workItem from="1579464505054" duration="5414000" />
-      <workItem from="1579474114923" duration="5224000" />
+      <workItem from="1579474114923" duration="9748000" />
     </task>
     <servers />
   </component>

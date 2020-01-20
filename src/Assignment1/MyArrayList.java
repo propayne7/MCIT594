@@ -23,9 +23,14 @@ public class MyArrayList<E> {
      * Need to implement this in step 5
      */
     public MyArrayList(E[] arr) {
-        data = (E[]) new Object[arr.length];
-        System.arraycopy(arr, 0, data, 0, data.length);
-        size = data.length;
+        if(arr == null){
+            size = 0;
+            data = (E[]) new Object[INITIAL_CAPACITY];
+        } else {
+            data = (E[]) new Object[arr.length];
+            System.arraycopy(arr, 0, data, 0, data.length);
+            size = data.length;
+        }
     }
 
     public E get(int index) {
@@ -82,6 +87,7 @@ public class MyArrayList<E> {
         }
         size--;
         shrinkArray();
+
         return target;
     }
 
@@ -91,10 +97,9 @@ public class MyArrayList<E> {
      */
     public boolean remove(E obj) {
         if (contains(obj)) {
-            for (int i = 0; i < data.length; i++) {
+            for (int i = 0; i < size; i++) {
                 if (data[i].equals(obj)) {
-                    data[i] = null;
-                    shrinkArray();
+                    remove(i);
                     return true;
                 }
             }
@@ -137,26 +142,15 @@ public class MyArrayList<E> {
      The below methods implement Step 3 of the Assignment.
      ****************************************************/
     private void shrinkArray() {
-        int numerator = countNonNulls();
-        int denominator = data.length;
-        double ratio = numerator / denominator;
+        double ratio = (size*1.0) / (data.length * 1.0);
 
         if(ratio <= .25){
-            int shrinkToSize = Math.round((int) denominator / 2);
-            E[] newData = (E[]) new Object[shrinkToSize];
-            System.arraycopy(data, 0, newData, 0, shrinkToSize);
+            int newLength = Math.round(data.length / 2);
+            E[] newData = (E[]) new Object[newLength];
+            System.arraycopy(data,0, newData, 0, newLength);
             data = newData;
-            size = shrinkToSize;
         }
+
     }
-    // method counts the elements in the array that are not null
-    public int countNonNulls() {
-        int count = 0;
-        for (int i = 0; i < data.length; i++) {
-            if (data[i] != null ) {
-                count++;
-            }
-        }
-        return count;
-    }
+
 }
