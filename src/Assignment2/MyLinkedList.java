@@ -162,24 +162,24 @@ public class MyLinkedList {
     public void reverse() {
         // create an array to hold the current nodes
         Node[] currentNodes = new Node[size];
+
         // iterate through the linked list to add the nodes to the currentNodes array
         for(int i = 0; i < size; i++){
             currentNodes[i] = getNode(i);
         }
 
+        // set the head and tail values of the reversed linked list
         head = currentNodes[size - 1];
         tail = currentNodes[0];
 
         for(int i = size - 1; i > 0; i--) {
             Node currentNode = currentNodes[i];
-            System.out.println("Current node value: " + currentNode.value);
             currentNode.next = currentNodes[i - 1];
         }
     }
 
 
     public void removeMaximumValues(int N) {
-        /* IMPLEMENT THIS METHOD! */
 
     }
 
