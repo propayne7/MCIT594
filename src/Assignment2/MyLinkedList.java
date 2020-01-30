@@ -1,5 +1,8 @@
 package Assignment2;
 
+import java.util.ArrayList;
+import java.util.Collections;
+
 public class MyLinkedList {
 
     class Node {
@@ -178,11 +181,57 @@ public class MyLinkedList {
         }
     }
 
+    public String getThreshold(int N){
+        // create an arraylist to hold the values of the linked list
+        ArrayList<String> values = new ArrayList<>();
+
+        Node currentNode = head;
+        for(int i = 0; i < size; i ++){
+            values.add(currentNode.value);
+            currentNode = currentNode.next;
+        }
+
+        // sort the arraylist in descending order
+        Collections.sort(values, Collections.reverseOrder());
+
+        // set the threshold value to compare against the linked list value;
+        String thresholdValue = values.get(N-1);
+
+        return thresholdValue;
+    }
+    /*
+        remove maximum values method:
+        - get
+     */
 
     public void removeMaximumValues(int N) {
+        // handle the situations where N <= 0 or N is greater than the number of values in the array
+        if (N <= 0 || N > size){
+            return;
+        } else {
+            // get the threshold value to compare against other strings in the linked list
+            String threshold = getThreshold(N);
+
+            Node current = head;
+            for(int i = 0; i < size; i++){
+                System.out.println("Current value: " + current.value + ". Comparing to: " + threshold);
+                if(current.value.compareTo(threshold) >= 0){
+                    if(i == 0){
+                        System.out.println("Current is the head");
+                        removeFirst();
+                    } else if(i == size - 1){
+                        System.out.println("Current is the tail");
+                        System.out.println("Comparing: " + current.value + " to threshold: " + threshold);
+                        tail = getNode(i - 1);
+                    } else {
+                        remove(i);
+                    }
+                }
+                current = current.next;
+            }
+        }
 
     }
-
 
     public boolean containsSubsequence(MyLinkedList two) {
         /* IMPLEMENT THIS METHOD! */
