@@ -8,30 +8,25 @@ public class Assignment2Runner {
         l1.add(1, "BANANA");
         l1.add(2, "CAT");
         l1.add(3, "GORILLA");
-        l1.add(4, "BEAR");
-        l1.add(5, "GORILLA");
-        l1.addLast("GORILLA");
+        l1.addLast("BEAR");
+
         System.out.println("Head: " + l1.head.value);
         System.out.println("Tail: " + l1.tail.value);
+        System.out.println("Size: " + l1.size);
+
+        System.out.println();
+        System.out.println();
+        System.out.println();
+        System.out.println();
+
+        l1.removeMaximumValues(2);
+
+        System.out.println("Head: " + l1.head.value);
+        System.out.println("Tail: " + l1.tail.value);
+        System.out.println("Size: " + l1.size);
 
         for(int i = 0; i < l1.size; i++){
             System.out.println(l1.get(i));
         }
-
-        System.out.println();
-        System.out.println();
-        System.out.println();
-        System.out.println();
-
-
-        l1.removeMaximumValues(1);
-
-        for(int i = 0; i < l1.size; i++){
-            System.out.println(l1.get(i));
-        }
-
-        System.out.println("New head: " + l1.head.value);
-        System.out.println("New tail: " + l1.tail.value);
-
     }
 }

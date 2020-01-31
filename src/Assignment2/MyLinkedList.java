@@ -199,38 +199,44 @@ public class MyLinkedList {
 
         return thresholdValue;
     }
-    /*
-        remove maximum values method:
-        - get
-     */
+
+    public void clearLinkedList(){
+        System.out.println("Size before clearing: " + size);
+        for(int i = 0; i < size; i++){
+            remove(i);
+        }
+        removeFirst();
+        removeLast();
+        size = 0;
+    }
+
 
     public void removeMaximumValues(int N) {
         // handle the situations where N <= 0 or N is greater than the number of values in the array
-        if (N <= 0 || N > size){
+        if (N <= 0){
             return;
         } else {
             // get the threshold value to compare against other strings in the linked list
             String threshold = getThreshold(N);
 
+            // create an array to hold the linked list values
+            ArrayList<String> values = new ArrayList<>();
+
             Node current = head;
             for(int i = 0; i < size; i++){
-                System.out.println("Current value: " + current.value + ". Comparing to: " + threshold);
-                if(current.value.compareTo(threshold) >= 0){
-                    if(i == 0){
-                        System.out.println("Current is the head");
-                        removeFirst();
-                    } else if(i == size - 1){
-                        System.out.println("Current is the tail");
-                        System.out.println("Comparing: " + current.value + " to threshold: " + threshold);
-                        tail = getNode(i - 1);
-                    } else {
-                        remove(i);
-                    }
+                if(current.value.compareTo(threshold) < 0) {
+                    values.add(current.value);
                 }
                 current = current.next;
             }
-        }
 
+            this.clearLinkedList();
+
+            for(int i = 0; i < values.size(); i++){
+                add(i, values.get(i));
+            }
+
+        }
     }
 
     public boolean containsSubsequence(MyLinkedList two) {
