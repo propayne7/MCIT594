@@ -2,23 +2,19 @@ package Assignment2;
 
 public class Assignment2Runner {
     public static void main(String[] args) {
-        MyLinkedList l2 = new MyLinkedList();
+        MyLinkedList l3 = new MyLinkedList();
+        MyLinkedList l4 = new MyLinkedList();
 
-        l2.add(0,"KANGAROO");
-        l2.add(1,"PLATYPUS");
-        l2.add(2,"AARDVARK");
-        l2.add(3,"KANGAROO");
-        l2.add(4,"DONKEY");
-        l2.add(5,"COYOTE");
+        l3.add(0,"KANGAROO");
+        l3.add(1,"PLATYPUS");
+        l3.add(2,"AARDVARK");
+        l3.add(3,"KANGAROO");
+        l3.add(4,"DONKEY");
+        l3.add(5,"COYOTE");
 
-        l2.removeMaximumValues(2);
+        l4.add(0, "CO");
 
-        System.out.println("Head: " + l2.head.value);
-        System.out.println("Tail: " + l2.tail.value);
-
-        for(int i = 0; i < l2.size; i++){
-            System.out.println(l2.get(i));
-        }
+        System.out.println("Testing the containsSubsequence: " + l3.containsSubsequence(l4));
 
     }
 }

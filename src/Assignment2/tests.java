@@ -6,6 +6,8 @@ import org.junit.Assert;
 public class tests {
     final MyLinkedList l1 = new MyLinkedList();
     final MyLinkedList l2 = new MyLinkedList();
+    final MyLinkedList l3 = null;
+    final MyLinkedList l4 = new MyLinkedList();
 
     public void populate_l1(){
         l1.addFirst("alpha");
@@ -25,6 +27,15 @@ public class tests {
         l2.removeMaximumValues(2);
     }
 
+    public void populate_l4(){
+        l4.add(0,"KANGAROO");
+        l4.add(1,"PLATYPUS");
+        l4.add(2,"AARDVARK");
+        l4.add(3,"KANGAROO");
+        l4.add(4,"DONKEY");
+        l4.add(5,"COYOTE");
+        l4.removeMaximumValues(2);
+    }
 
     @Test
     public void testReverseHead() {
@@ -53,6 +64,7 @@ public class tests {
 
     @Test
     public void testRemoveMaxValuesTail(){
+        populate_l2();
         Assert.assertTrue("removeMaxValues() method is not removing the correct values.", l2.tail.value.equals("COYOTE"));
     }
 
@@ -60,5 +72,16 @@ public class tests {
     public void testRemoveMaxValuesInnerValues(){
         populate_l2();
         Assert.assertTrue("removeMaxValues() method is not removing the correct values.", l2.head.next.value.equals("DONKEY"));
+    }
+
+    @Test
+    public void testContainsSubsequenceNullArgument(){
+        boolean nullArg = l2.containsSubsequence(l3);
+        Assert.assertFalse("containsSubsequence() method does not handle being passed a null argument", nullArg);
+    }
+
+    @Test
+    public void testContainsSubsequence(){
+
     }
 }

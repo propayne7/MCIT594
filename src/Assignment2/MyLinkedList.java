@@ -73,7 +73,6 @@ public class MyLinkedList {
         }
     }
 
-
     public boolean contains(String value) {
         Node current = head;
         while (current != null) {
@@ -200,15 +199,49 @@ public class MyLinkedList {
         return thresholdValue;
     }
 
+    /*
+        Method to clear the linked list
+     */
     public void clearLinkedList(){
-        for(int i = 0; i < size; i++){
-            remove(i);
+        Node nextNode = null;
+        // use a while loop to repeatedly clear the head until the head is null
+        while(head != null) {
+            nextNode = head.next;
+            removeFirst();
+            head = nextNode;
         }
-        removeFirst();
-        removeLast();
-        size = 0;
     }
 
+    /*
+        METHOD TO GET THE INDEX OF A VALUE IN A LINKED LIST
+        - create an integer array list
+        - iterate through the linked list and compare each link's value to the value passed as an argument to this method
+        - if the above is true, add the index location to the array list
+        - return the array list
+     */
+
+    public ArrayList<Integer> getIndex(String value){
+        ArrayList<Integer> indexes = new ArrayList<>();
+
+        Node current = head;
+        for(int i = 0; i < size; i++) {
+            if (current.value.equals(value)) {
+                indexes.add(i);
+            }
+            current = current.next;
+        }
+        return indexes;
+    }
+
+    /*
+        REMOVE MAXIMUM N VALUES:
+            - call the getThreshold method which iterates through the linked list values and returns a string value
+              which is used to compare against the current values
+            - add current values of the linked list to an ArrayList
+            - add values < the threshold value to a separate ArrayList
+            - clear the current linked list
+            - repopulate the linked list with the values from the ArrayList that are below the threshold
+     */
 
     public void removeMaximumValues(int N) {
         // handle the situations where N <= 0 or N is greater than the number of values in the array
@@ -221,6 +254,7 @@ public class MyLinkedList {
             // create an array to hold the linked list values
             ArrayList<String> values = new ArrayList<>();
 
+            // iterate through the current linked list and compare each value to the threshold value
             Node current = head;
             for(int i = 0; i < size; i++){
                 if(current.value.compareTo(threshold) < 0) {
@@ -229,21 +263,62 @@ public class MyLinkedList {
                 current = current.next;
             }
 
-            this.clearLinkedList();
+            // clear the current linked list
+            clearLinkedList();
 
-            for(int i = 0; i < values.size(); i++){
+            // "re-populate" the linked list with the values below the threshold
+            for(int i = 0; i < values.size(); i++) {
                 add(i, values.get(i));
             }
-
         }
     }
 
+    /*
+        CONTAINS SUBSEQUENCE:
+            -
+     */
+
     public boolean containsSubsequence(MyLinkedList two) {
-        /* IMPLEMENT THIS METHOD! */
+        // handle the case where a null value is passed to the method
+        if(two == null){
+            return false;
+        }
+        // handle the case where an improperly created linked list is passed (e.g. head or tail ls null)
+        if(two.head == null || two.tail == null || two.head.value == null || two.tail.value == null){
+            return false;
+        }
+        // handle the case where the size of the argument linked list is greater than the current linked lise
+        if(two.size > size){
+            return false;
+        }
+        // check if the current linked list contains the values passed by the argument linked list
+        boolean containsValues = false;
+        for(int i = 0; i < two.size; i++){
+            if(contains(two.get(i))){
+                containsValues = true;
+            }
+        }
 
-        return false;
+        // concatenate all of the values of the linked list into a single string
+        String currentValuesConcatenated = "";
+        for(int i = 0; i < size; i++){
+            currentValuesConcatenated += get(i);
+        }
+
+        // concatenate all of the values of the argument linked list into a single string
+        String argumentValuesConcatenated = "";
+        for(int i = 0; i < two.size; i++){
+            argumentValuesConcatenated += two.get(i);
+        }
+
+        System.out.println(currentValuesConcatenated);
+        System.out.println(argumentValuesConcatenated);
+
+        // compare the concatenated strings to determine if the subsequence exists
+        if(containsValues && currentValuesConcatenated.contains(argumentValuesConcatenated)){
+            return true;
+        }
+
+        return containsValues;
     }
-
-
-
 }
