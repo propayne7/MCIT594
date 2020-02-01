@@ -201,7 +201,6 @@ public class MyLinkedList {
     }
 
     public void clearLinkedList(){
-        System.out.println("Size before clearing: " + size);
         for(int i = 0; i < size; i++){
             remove(i);
         }

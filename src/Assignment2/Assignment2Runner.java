@@ -2,31 +2,23 @@ package Assignment2;
 
 public class Assignment2Runner {
     public static void main(String[] args) {
-        MyLinkedList l1 = new MyLinkedList();
+        MyLinkedList l2 = new MyLinkedList();
 
-        l1.addFirst("DOG");
-        l1.add(1, "BANANA");
-        l1.add(2, "CAT");
-        l1.add(3, "GORILLA");
-        l1.addLast("BEAR");
+        l2.add(0,"KANGAROO");
+        l2.add(1,"PLATYPUS");
+        l2.add(2,"AARDVARK");
+        l2.add(3,"KANGAROO");
+        l2.add(4,"DONKEY");
+        l2.add(5,"COYOTE");
 
-        System.out.println("Head: " + l1.head.value);
-        System.out.println("Tail: " + l1.tail.value);
-        System.out.println("Size: " + l1.size);
+        l2.removeMaximumValues(2);
 
-        System.out.println();
-        System.out.println();
-        System.out.println();
-        System.out.println();
+        System.out.println("Head: " + l2.head.value);
+        System.out.println("Tail: " + l2.tail.value);
 
-        l1.removeMaximumValues(2);
-
-        System.out.println("Head: " + l1.head.value);
-        System.out.println("Tail: " + l1.tail.value);
-        System.out.println("Size: " + l1.size);
-
-        for(int i = 0; i < l1.size; i++){
-            System.out.println(l1.get(i));
+        for(int i = 0; i < l2.size; i++){
+            System.out.println(l2.get(i));
         }
+
     }
 }
