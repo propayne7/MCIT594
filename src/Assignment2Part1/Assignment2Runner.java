@@ -1,4 +1,4 @@
-package Assignment2;
+package Assignment2Part1;
 
 public class Assignment2Runner {
     public static void main(String[] args) {
