@@ -12,6 +12,8 @@ public class HtmlValidator {
 	 * Implement this method!
 	 */
 	public static Stack<HtmlTag> isValidHtml(Queue<HtmlTag> tags) {
+
+
 		return null; // change as needed!
 	}
 	
