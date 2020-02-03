@@ -1,12 +1,9 @@
 package Assignment2Part2;
 
-import javax.swing.*;
 import java.io.FileInputStream;
 import java.io.InputStream;
 import java.io.IOException;
-import java.util.LinkedList;
-import java.util.Queue;
-import java.util.Stack;
+import java.util.*;
 
 public class HtmlValidator {
 	
@@ -14,59 +11,82 @@ public class HtmlValidator {
 	 * Implement this method!
 	 */
 	public static Stack<HtmlTag> isValidHtml(Queue<HtmlTag> tags) {
-		// handling of null cases
+		// check if queue passed to the method is null or empty
 		if(tags == null){ return null; }
 		if(tags.isEmpty()){ return null; }
 
-		// create a stack of open tag HTML elements from the tags queue (method argument)
-		Stack<HtmlTag> htmlTagStack = new Stack<>();
-		Stack<HtmlTag> openHtmlTagStack = new Stack<>();
-		Queue<HtmlTag> closingTagQueue = new LinkedList<>();
+		// create a queue of closing tags
+		Queue<HtmlTag> closingTagsQueue = getClosingTags(tags);
+		Queue<HtmlTag> excludeSelfClosing = cleanseClosingTags(tags);
 
-		// populate a stack with all html tags
-		for(HtmlTag z : tags){
-			htmlTagStack.push(z);
-		}
+		Stack<HtmlTag> stackTags = new Stack<>();
 
-		// populate a stack of only open tags
-		for(HtmlTag i : tags){
-			if(i.isOpenTag() && !i.isSelfClosing()){
-				openHtmlTagStack.push(i);
+
+		for(HtmlTag t : excludeSelfClosing){
+			if(!t.toString().contains("/")){
+				stackTags.push(t);
+			} else if(t.toString().contains("/") && t.matches(stackTags.peek())){
+				stackTags.pop();
+				closingTagsQueue.remove(t);
 			}
-		}
+			else if(t.toString().contains("/") && !t.matches(stackTags.peek())){
+				break;
 
-		// populate a queue of closing tags
-		for(HtmlTag x1 : tags){
-			if(x1.toString().contains("/") && !x1.isSelfClosing()){
-				closingTagQueue.add(x1);
 			}
+			if(stackTags.isEmpty()){ break; }
 		}
 
-		// compare the order of opening and closing tags
-		boolean control = true;
-		while(control){
-			if(openHtmlTagStack.isEmpty()){ break; }
-
-			HtmlTag stackValue = openHtmlTagStack.peek();
-			HtmlTag queueValue = closingTagQueue.peek();
-
-			System.out.println("Comparing: " + stackValue + " to " + queueValue);
-
-			if(stackValue.matches(queueValue)){
-				System.out.println("Stack value: " + stackValue + " matches Queue value: " + queueValue);
-				openHtmlTagStack.pop();
-				closingTagQueue.poll();
-			} else {
-				control = false;
-			}
-		}
-
-		if(openHtmlTagStack.isEmpty() && !closingTagQueue.isEmpty()){
+		if(stackTags.isEmpty() && !closingTagsQueue.isEmpty()){
 			return null;
 		}
-		return openHtmlTagStack; // change as needed!
+
+		return stackTags;
 	}
-	
+
+	public static void printStack(Stack<HtmlTag> stackOfTags){
+		System.out.println("The stack contains the values: ");
+		String values = Arrays.toString(stackOfTags.toArray());
+		System.out.println(values);
+	}
+
+	public static void printQueue(Queue<HtmlTag> queueOfTags){
+		System.out.println("The queue contains the values: ");
+		String values = Arrays.toString(queueOfTags.toArray());
+		System.out.println(values);
+	}
+
+	public static Stack<HtmlTag> getOpeningTags(Queue<HtmlTag> tags){
+		Stack<HtmlTag> openingTagStack = new Stack<>();
+		// create opening tag stack
+		for(HtmlTag t : tags){
+			if(!t.isSelfClosing() && !t.toString().contains("/")){
+				openingTagStack.push(t);
+			}
+		}
+		System.out.println("Created a stack of opening tags: " + Arrays.toString(openingTagStack.toArray()));
+		return openingTagStack;
+	}
+
+	public static Queue<HtmlTag> getClosingTags(Queue<HtmlTag> tags){
+		Queue<HtmlTag> closingTagsQueue = new LinkedList<>();
+		for(HtmlTag t : tags){
+			if(!t.isSelfClosing() && t.toString().contains("/")){
+				closingTagsQueue.add(t);
+			}
+		}
+		return closingTagsQueue;
+	}
+
+	public static Queue<HtmlTag> cleanseClosingTags(Queue<HtmlTag> tags){
+		Queue<HtmlTag> cleansedSelfClosing = new LinkedList<>();
+		for(HtmlTag t : tags){
+			if(!t.isSelfClosing()){
+				cleansedSelfClosing.add(t);
+			}
+		}
+		return cleansedSelfClosing;
+	}
+
 	/*
 	 * Instructor-provided code:
 	 * This function reads an HTML file and outputs its structure as the HtmlTags only.
