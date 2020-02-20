@@ -146,13 +146,38 @@ public class Analyzer {
 	 * Implement this method in Part 3
 	 */
 	public static Map<String, Double> calculateScores(Set<Word> words) {
-		return null;
+		HashMap wordMap = new HashMap();
+		Iterator<Word> itr = words.iterator();
+
+		if(words == null){
+			return null;
+		}
+
+		while(itr.hasNext()){
+			Word currentWord = itr.next();
+			double score = currentWord.total / currentWord.count;
+
+			wordMap.put(currentWord.text, score);
+		}
+
+		return wordMap;
 	}
 	
 	/*
 	 * Implement this method in Part 4
 	 */
 	public static double calculateSentenceScore(Map<String, Double> wordScores, String sentence) {
+		if(wordScores == null || sentence == null || wordScores.isEmpty()){
+			return 0;
+		}
+
+		String lowerCaseSentence = sentence.toLowerCase();
+
+
+		double score = 0;
+
+
+
 		return 0;
 	}
 
@@ -174,16 +199,5 @@ public class Analyzer {
 		Map<String, Double> wordScores = Analyzer.calculateScores(words);
 		double score = Analyzer.calculateSentenceScore(wordScores, sentence);
 		System.out.println("The sentiment score is " + score);
-
-		System.out.println("Total size of set: " + words.size());
-
-		for(Word w : words){
-			System.out.println("Word: " + w.text);
-			System.out.println("Count: " + w.count);
-			System.out.println("Total: " + w.total);
-			System.out.println();
-			System.out.println();
-		}
-
 	}
 }
