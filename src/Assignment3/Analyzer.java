@@ -146,7 +146,7 @@ public class Analyzer {
 	 * Implement this method in Part 3
 	 */
 	public static Map<String, Double> calculateScores(Set<Word> words) {
-		HashMap wordMap = new HashMap();
+		HashMap<String, Double> wordMap = new HashMap();
 		Iterator<Word> itr = words.iterator();
 
 		if(words == null){
@@ -171,14 +171,19 @@ public class Analyzer {
 			return 0;
 		}
 
-		String lowerCaseSentence = sentence.toLowerCase();
-
-
 		double score = 0;
+		String[] lowerCaseSentence = sentence.toLowerCase().split(" ");
+		int count = lowerCaseSentence.length;
 
+		for(String s : lowerCaseSentence){
+			if(wordScores.containsKey(s)){
+				score += wordScores.get(s);
+			}
+		}
 
+		double sentiment = score / count;
 
-		return 0;
+		return sentiment;
 	}
 
 	/*
