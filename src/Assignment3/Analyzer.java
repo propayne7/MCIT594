@@ -33,15 +33,18 @@ public class Analyzer {
 				if(isLineValid(line)){
 					int score = getScore(line);
 					String text = getText(line);
-					Sentence currentSentence = new Sentence(score, text);
-					sentences.add(currentSentence);
+
+					if(Math.abs(score) <= 2 && text != null) {
+						Sentence currentSentence = new Sentence(score, text);
+						sentences.add(currentSentence);
+					}
 				}
 			}
 		} catch (IOException e) {
 			e.printStackTrace();
 		}
 
-		return null;
+		return sentences;
 	}
 
 	// method to test the line is in the valid format
@@ -79,12 +82,15 @@ public class Analyzer {
 	public static String getText(String line){
 		Pattern p = Pattern.compile("(?<=\\s).*");
 		Matcher m = p.matcher(line);
+		String text  = "";
 
 		if(m.find()){
-			System.out.println("Line matches: " + m.group());
+			text = m.group();
+		} else {
+			text = null;
 		}
 
-		return m.group();
+		return text;
 	}
 	
 	/*
@@ -126,5 +132,6 @@ public class Analyzer {
 		Map<String, Double> wordScores = Analyzer.calculateScores(words);
 		double score = Analyzer.calculateSentenceScore(wordScores, sentence);
 		System.out.println("The sentiment score is " + score);
+
 	}
 }
