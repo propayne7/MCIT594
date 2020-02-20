@@ -1,6 +1,7 @@
 package Assignment3;
 
 import java.io.BufferedReader;
+import java.io.FileReader;
 import java.io.IOException;
 import java.nio.charset.Charset;
 import java.nio.file.Files;
@@ -16,16 +17,19 @@ public class Analyzer {
 	 * Implement this method in Part 1
 	 */
 	public static List<Sentence> readFile(String filename) {
-		// create Path object to format the filename passed to the method
-		Path file = Paths.get(filename);
-		Charset charset = Charset.forName("US-ASCII");
-
 		// create a linked list to store the sentences
 		LinkedList<Sentence> sentences = new LinkedList<>();
 
+		// handle the case where "null" is passed as the filename
+		if (filename == null){
+			sentences = null;
+			return sentences;
+		}
+
 		try {
 			// create a buffered reader to pull in the file data
-			BufferedReader reader = Files.newBufferedReader(file, charset);
+			FileReader fr = new FileReader(filename);
+			BufferedReader reader = new BufferedReader(fr);
 			String line = null;
 			// read the file line by line, assigning each line to a new sentence object
 			while((line = reader.readLine()) != null){
@@ -41,6 +45,7 @@ public class Analyzer {
 				}
 			}
 		} catch (IOException e) {
+			sentences = null;
 			e.printStackTrace();
 		}
 
@@ -97,7 +102,44 @@ public class Analyzer {
 	 * Implement this method in Part 2
 	 */
 	public static Set<Word> allWords(List<Sentence> sentences) {
-		return null;
+		LinkedHashSet<Word> wordSet = new LinkedHashSet<>();
+
+		if(sentences == null){
+			wordSet = null;
+			return wordSet;
+		}
+
+		ArrayList<Word> words = new ArrayList<>();
+
+		for(Sentence s : sentences){
+			String lowerCaseSentence = s.text.toLowerCase();
+			String[] sentenceArray = lowerCaseSentence.split(" ");
+
+			for(String word : sentenceArray){
+				boolean result = word.matches("^[a-zA-Z]+$");
+				if(result){
+					Word currentWord = new Word(word);
+					wordSet.add(currentWord);
+
+					currentWord.total = s.score;
+					words.add(currentWord);
+				}
+			}
+		}
+
+		Iterator<Word> itr = wordSet.iterator();
+
+		while(itr.hasNext()){
+			Word currentValue = itr.next();
+			for(Word w : words){
+				if(currentValue.text.equals(w.text)){
+					currentValue.increaseTotal(w.total);
+				}
+			}
+
+		}
+
+		return wordSet;
 	}
 	
 	/*
@@ -132,6 +174,16 @@ public class Analyzer {
 		Map<String, Double> wordScores = Analyzer.calculateScores(words);
 		double score = Analyzer.calculateSentenceScore(wordScores, sentence);
 		System.out.println("The sentiment score is " + score);
+
+		System.out.println("Total size of set: " + words.size());
+
+		for(Word w : words){
+			System.out.println("Word: " + w.text);
+			System.out.println("Count: " + w.count);
+			System.out.println("Total: " + w.total);
+			System.out.println();
+			System.out.println();
+		}
 
 	}
 }
