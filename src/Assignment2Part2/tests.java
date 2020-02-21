@@ -27,12 +27,12 @@ public class tests
 
     @Test
     public void testFile1() {
-        Assert.assertTrue("isValidHtml returns incorrect value for a valid HTML file (test1.html)", this.validateTestFile("C:\\Users\\payne\\Desktop\\MCIT\\MCIT594\\src\\Assignment2Part2\\test1.html").isEmpty());
+        Assert.assertTrue("isValidHtml returns incorrect value for a valid HTML file (test1.html)", this.validateTestFile("C:\\Users\\cpayne002\\Desktop\\MCIT\\MCIT594\\src\\Assignment2Part2\\test1.html").isEmpty());
     }
 
     @Test
     public void testFile2() {
-        final Stack<HtmlTag> validateTestFile = this.validateTestFile("C:\\Users\\payne\\Desktop\\MCIT\\MCIT594\\src\\Assignment2Part2\\test2.html");
+        final Stack<HtmlTag> validateTestFile = this.validateTestFile("C:\\Users\\cpayne002\\Desktop\\MCIT\\MCIT594\\src\\Assignment2Part2\\test2.html");
         final Stack<HtmlTag> stack = new Stack<HtmlTag>();
         stack.push(new HtmlTag("html", true));
         stack.push(new HtmlTag("b", true));
@@ -41,7 +41,7 @@ public class tests
 
     @Test
     public void testFile3() {
-        final Stack<HtmlTag> validateTestFile = this.validateTestFile("C:\\Users\\payne\\Desktop\\MCIT\\MCIT594\\src\\Assignment2Part2\\test3.html");
+        final Stack<HtmlTag> validateTestFile = this.validateTestFile("C:\\Users\\cpayne002\\Desktop\\MCIT\\MCIT594\\src\\Assignment2Part2\\test3.html");
         final Stack<HtmlTag> stack = new Stack<HtmlTag>();
         stack.push(new HtmlTag("b", true));
         stack.push(new HtmlTag("i", true));

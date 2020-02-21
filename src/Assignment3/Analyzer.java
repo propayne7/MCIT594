@@ -103,45 +103,69 @@ public class Analyzer {
 	 */
 	public static Set<Word> allWords(List<Sentence> sentences) {
 		LinkedHashSet<Word> wordSet = new LinkedHashSet<>();
+		ArrayList<String> uniqueWordArrayList = new ArrayList<>();
+		ArrayList<Word> wordArrayList = new ArrayList<>();
 
 		if(sentences == null){
 			wordSet = null;
 			return wordSet;
 		}
 
-		ArrayList<Word> words = new ArrayList<>();
-
+		// iterate through each sentence, splitting each sentence into an array of words (type: String)
+		// add valid strings to the wordSet
 		for(Sentence s : sentences){
+			if(s == null){
+				break;
+			}
+			// split the sentence into an array using the space as a delimiter
 			String lowerCaseSentence = s.text.toLowerCase();
-			String[] sentenceArray = lowerCaseSentence.split(" ");
+			String[] wordArray = lowerCaseSentence.split(" ");
 
-			for(String word : sentenceArray){
-				boolean result = word.matches("^[a-zA-Z]+$");
-				if(result){
-					Word currentWord = new Word(word);
-					wordSet.add(currentWord);
-
-					currentWord.total = s.score;
-					words.add(currentWord);
+			for(String str : wordArray) {
+				boolean result = str.matches("^[a-zA-Z]+$");
+				if (result) {
+					Word currentWord = new Word(str);
+					currentWord.total = s.getScore();
+					wordArrayList.add(currentWord);
 				}
 			}
+		}
+
+		boolean emptyUniqueWordArray = uniqueWordArrayList.isEmpty();
+
+		for(Word w : wordArrayList){
+			if(emptyUniqueWordArray){
+				uniqueWordArrayList.add(w.getText());
+			} else {
+				if(!uniqueWordArrayList.contains(w.text)){
+					uniqueWordArrayList.add(w.getText());
+				}
+			}
+		}
+
+		for(String str : uniqueWordArrayList){
+			Word currentWord = new Word(str);
+			wordSet.add(currentWord);
 		}
 
 		Iterator<Word> itr = wordSet.iterator();
 
 		while(itr.hasNext()){
-			Word currentValue = itr.next();
-			for(Word w : words){
-				if(currentValue.text.equals(w.text)){
-					currentValue.increaseTotal(w.total);
+			Word hashSetWord = itr.next();
+			for(Word w : wordArrayList){
+				if(hashSetWord.text.equals(w.text)){
+					hashSetWord.increaseTotal(w.getTotal());
 				}
 			}
+		}
 
+		for(Word w : wordSet){
+			System.out.println(w.getText());
 		}
 
 		return wordSet;
 	}
-	
+
 	/*
 	 * Implement this method in Part 3
 	 */
@@ -204,5 +228,6 @@ public class Analyzer {
 		Map<String, Double> wordScores = Analyzer.calculateScores(words);
 		double score = Analyzer.calculateSentenceScore(wordScores, sentence);
 		System.out.println("The sentiment score is " + score);
+
 	}
 }

@@ -19,7 +19,7 @@ public class ReadFileTest
     public void testTextOneSentence() {
         List<Sentence> file = null;
         try {
-            file = (List<Sentence>)Analyzer.readFile("C:\\Users\\payne\\Desktop\\MCIT\\MCIT594\\src\\Assignment3\\test1.txt");
+            file = (List<Sentence>)Analyzer.readFile("C:\\Users\\cpayne002\\Desktop\\MCIT\\MCIT594\\src\\Assignment3\\test1.txt");
         }
         catch (Exception ex) {
             Assert.fail("readFile throws exception when processing file with one sentence (test1.txt): " + ex.toString());
@@ -43,7 +43,7 @@ public class ReadFileTest
     public void testScoreOneSentence() {
         List<Sentence> file = null;
         try {
-            file = (List<Sentence>)Analyzer.readFile("C:\\Users\\payne\\Desktop\\MCIT\\MCIT594\\src\\Assignment3\\test2.txt");
+            file = (List<Sentence>)Analyzer.readFile("C:\\Users\\cpayne002\\Desktop\\MCIT\\MCIT594\\src\\Assignment3\\test2.txt");
         }
         catch (Exception ex) {
             Assert.fail("readFile throws exception when processing file with one sentence (test2.txt): " + ex.toString());
@@ -67,7 +67,7 @@ public class ReadFileTest
     public void testMultipleSentencesPositiveScores() {
         List<Sentence> file = null;
         try {
-            file = (List<Sentence>)Analyzer.readFile("C:\\Users\\payne\\Desktop\\MCIT\\MCIT594\\src\\Assignment3\\test3.txt");
+            file = (List<Sentence>)Analyzer.readFile("C:\\Users\\cpayne002\\Desktop\\MCIT\\MCIT594\\src\\Assignment3\\test3.txt");
         }
         catch (Exception ex) {
             Assert.fail("readFile throws exception when processing file with multiple sentences (test3.txt): " + ex.toString());
@@ -103,7 +103,7 @@ public class ReadFileTest
     public void testMultipleSentencesNegativeScores() {
         List<Sentence> file = null;
         try {
-            file = (List<Sentence>)Analyzer.readFile("C:\\Users\\payne\\Desktop\\MCIT\\MCIT594\\src\\Assignment3\\test4.txt");
+            file = (List<Sentence>)Analyzer.readFile("C:\\Users\\cpayne002\\Desktop\\MCIT\\MCIT594\\src\\Assignment3\\test4.txt");
         }
         catch (Exception ex) {
             Assert.fail("readFile throws execption when processing file with multiple sentences (test4.txt): " + ex.toString());
