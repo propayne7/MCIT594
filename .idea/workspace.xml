@@ -2,14 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="e37c98c1-a5d0-4b1d-8f22-f3dedd52880e" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/MCIT594.iml" beforeDir="false" afterPath="$PROJECT_DIR$/MCIT594.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Assignment2Part2/HtmlValidatorRunner.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Assignment2Part2/HtmlValidatorRunner.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Assignment2Part2/tests.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Assignment2Part2/tests.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Assignment3/Analyzer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Assignment3/Analyzer.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Assignment3/ReadFileTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Assignment3/ReadFileTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Assignment3/reviews.txt" beforeDir="false" afterPath="$PROJECT_DIR$/src/Assignment3/reviews.txt" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -145,9 +139,9 @@
     <recent_temporary>
       <list>
         <item itemvalue="JUnit.CalculateScoresTest" />
+        <item itemvalue="JUnit.CalculateSentenceScoreTest" />
         <item itemvalue="JUnit.AllWordsTest" />
         <item itemvalue="JUnit.ReadFileTest" />
-        <item itemvalue="JUnit.CalculateSentenceScoreTest" />
         <item itemvalue="Application.Analyzer" />
       </list>
     </recent_temporary>
@@ -167,7 +161,7 @@
       <workItem from="1579464505054" duration="5414000" />
       <workItem from="1579474114923" duration="9983000" />
       <workItem from="1579521353432" duration="189000" />
-      <workItem from="1582214943576" duration="12746000" />
+      <workItem from="1582214943576" duration="13601000" />
     </task>
     <servers />
   </component>

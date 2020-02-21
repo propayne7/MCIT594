@@ -179,8 +179,7 @@ public class Analyzer {
 
 		while(itr.hasNext()){
 			Word currentWord = itr.next();
-			double score = currentWord.total / currentWord.count;
-
+			double score = (double) currentWord.getTotal() / (double )currentWord.getCount();
 			wordMap.put(currentWord.text, score);
 		}
 
