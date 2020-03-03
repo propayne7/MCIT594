@@ -195,16 +195,18 @@ public class BinarySearchTree<E extends Comparable<E>> {
 			return - 1;
 		}
 
-		return height(root, null, val);
+		Node currentNode = findNode(root, null, val);
+
+		return height(currentNode);
 	}
 
-	protected int height(Node n, Node parent, E val){
+	private int height(Node n){
 		if(n == null){
 			return -1;
 		}
 
-		int leftHeight = height(n.leftChild, n, val);
-		int rightHeight = height(n.rightChild, n, val);
+		int leftHeight = height(n.leftChild);
+		int rightHeight = height(n.rightChild);
 
 		if(leftHeight > rightHeight){
 			return leftHeight + 1;
@@ -215,12 +217,37 @@ public class BinarySearchTree<E extends Comparable<E>> {
 	
 	// Method #4.
 	protected boolean isBalanced(Node n) {
+		if(n == null){
+			return true;
+		}
+
+		int leftHeight;
+		int rightHeight;
+
+		leftHeight = height2(n.leftChild);
+		rightHeight = height2(n.rightChild);
+
+		System.out.println("Left height: " + leftHeight);
+		System.out.println("Right height: " + rightHeight);
+
+		if(Math.abs(leftHeight - rightHeight) <= 1 && isBalanced(n.leftChild) && isBalanced(n.rightChild)){
+			return true;
+		}
+
+
 		return false;
 	}
-	
+
+	protected int height2(Node n){
+		if(n == null){
+			return 0;
+		}
+		return 1 + Math.max(height2(n.leftChild), height2(n.rightChild));
+	}
+
 	// Method #5. 
 	public boolean isBalanced() {
-		return false;
+		return isBalanced(root);
 	}
 	
 }
