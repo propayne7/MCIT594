@@ -18,6 +18,7 @@ public class BSTRunner {
 
         System.out.println(BST.maxValue(BST.root));
         System.out.println(BST.depth(12));
+        System.out.println(BST.height(10));
 
 
 

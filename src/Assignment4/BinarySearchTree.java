@@ -175,6 +175,8 @@ public class BinarySearchTree<E extends Comparable<E>> {
 
 		int dist = -1;
 
+		// first check is the base case, where the current node's value == 0. If this check returns true before the recursive
+		// step, then the root value contains the desired value and the depth is 0.
 		if((val.compareTo(n.value) == 0) || (dist = depth(n.leftChild, n, val)) >= 0 || (dist = depth(n.rightChild, n, val)) >= 0){
 			return dist + 1;
 		}
@@ -184,7 +186,31 @@ public class BinarySearchTree<E extends Comparable<E>> {
 	
 	// Method #3.
 	protected int height(E val) {
-		return 0;
+		// handle the case where val == null
+		if(val == null){
+			return - 1;
+		}
+		// handle the case where val does not exist in the tree
+		if(!contains(val)){
+			return - 1;
+		}
+
+		return height(root, null, val);
+	}
+
+	protected int height(Node n, Node parent, E val){
+		if(n == null){
+			return -1;
+		}
+
+		int leftHeight = height(n.leftChild, n, val);
+		int rightHeight = height(n.rightChild, n, val);
+
+		if(leftHeight > rightHeight){
+			return leftHeight + 1;
+		} else {
+			return rightHeight + 1;
+		}
 	}
 	
 	// Method #4.
