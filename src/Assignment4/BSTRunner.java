@@ -4,21 +4,20 @@ public class BSTRunner {
 
     public static void main(String[] args) {
         BinarySearchTree<Integer> BST = new BinarySearchTree<>();
-        BST.add(10);
+        BST.add(8);
+        BST.add(6);
+        BST.add(16);
         BST.add(4);
-        BST.add(15);
+        BST.add(10);
         BST.add(20);
-        BST.add(1);
-        BST.add(7);
-        BST.add(3);
+        BST.add(2);
+        BST.add(9);
+        BST.add(12);
 
 
-        BST.remove(15);
 
         System.out.println(BST.maxValue(BST.root));
-
-        System.out.println(BST.findNode(null).value);
-        System.out.println(BST.findNode(3).value);
+        System.out.println(BST.depth(12));
 
 
 

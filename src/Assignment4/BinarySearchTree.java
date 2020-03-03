@@ -118,11 +118,12 @@ public class BinarySearchTree<E extends Comparable<E>> {
 			return null;
 		}
 
-		Node foundNode = findNode(root, null, val);
-
-		if(foundNode == null){
+		if(!contains(val)){
 			return null;
 		}
+
+		Node foundNode = findNode(root, null, val);
+
 		return foundNode;
 	}
 
@@ -156,7 +157,29 @@ public class BinarySearchTree<E extends Comparable<E>> {
 	
 	// Method #2.
 	protected int depth(E val) {
-		return 0;
+		if(val == null){
+			return -1;
+		}
+
+		if(!contains(val)){
+			return -1;
+		}
+
+		return depth(root, null, val);
+	}
+
+	protected int depth(Node n, Node parent, E val){
+		if(n == null){
+			return -1;
+		}
+
+		int dist = -1;
+
+		if((val.compareTo(n.value) == 0) || (dist = depth(n.leftChild, n, val)) >= 0 || (dist = depth(n.rightChild, n, val)) >= 0){
+			return dist + 1;
+		}
+
+		return dist;
 	}
 	
 	// Method #3.
