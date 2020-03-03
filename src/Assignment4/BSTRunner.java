@@ -19,6 +19,18 @@ public class BSTRunner {
         System.out.println(BST.maxValue(BST.root));
         System.out.println(BST.depth(12));
         System.out.println(BST.height(10));
+        System.out.println(BST.isBalanced());
+        System.out.println();
+        System.out.println();
+
+        BinarySearchTree<Integer> BST_2 = new BinarySearchTree<>();
+        BST_2.add(5);
+        BST_2.add(2);
+        BST_2.add(6);
+        System.out.println(BST_2.height(5));
+        System.out.println(BST_2.height(2));
+        System.out.println(BST_2.height(6));
+        System.out.println(BST_2.isBalanced());
 
 
 

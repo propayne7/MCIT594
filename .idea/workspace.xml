@@ -2,8 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="e37c98c1-a5d0-4b1d-8f22-f3dedd52880e" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/src/Assignment4/HeightTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/MCIT594/Assignment4/BSTRunner.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/MCIT594/Assignment4/BSTRunner.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/MCIT594/Assignment4/BinarySearchTree.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/MCIT594/Assignment4/BinarySearchTree.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Assignment4/BSTRunner.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Assignment4/BSTRunner.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Assignment4/BinarySearchTree.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Assignment4/BinarySearchTree.java" afterDir="false" />
     </list>
@@ -61,7 +63,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Application.BSTRunner">
+  <component name="RunManager" selected="JUnit.HeightTest">
     <configuration name="BSTRunner" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="Assignment4.BSTRunner" />
       <module name="MCIT594" />
@@ -120,16 +122,16 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="ReadFileTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="HeightTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="MCIT594" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="Assignment3.*" />
+          <option name="PATTERN" value="Assignment4.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="Assignment3" />
-      <option name="MAIN_CLASS_NAME" value="Assignment3.ReadFileTest" />
+      <option name="PACKAGE_NAME" value="Assignment4" />
+      <option name="MAIN_CLASS_NAME" value="Assignment4.HeightTest" />
       <option name="TEST_OBJECT" value="class" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -139,16 +141,16 @@
       <item itemvalue="JUnit.AllWordsTest" />
       <item itemvalue="JUnit.CalculateScoresTest" />
       <item itemvalue="JUnit.CalculateSentenceScoreTest" />
-      <item itemvalue="JUnit.ReadFileTest" />
       <item itemvalue="Application.BSTRunner" />
+      <item itemvalue="JUnit.HeightTest" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.HeightTest" />
         <item itemvalue="Application.BSTRunner" />
         <item itemvalue="JUnit.CalculateScoresTest" />
         <item itemvalue="JUnit.CalculateSentenceScoreTest" />
         <item itemvalue="JUnit.AllWordsTest" />
-        <item itemvalue="JUnit.ReadFileTest" />
       </list>
     </recent_temporary>
   </component>
