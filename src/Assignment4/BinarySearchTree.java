@@ -1,4 +1,4 @@
-
+package Assignment4;
 
 public class BinarySearchTree<E extends Comparable<E>> {
 	class Node {
@@ -113,7 +113,45 @@ public class BinarySearchTree<E extends Comparable<E>> {
 
 	// Method #1.
 	public Node findNode(E val) {
-		return null;
+		// error handling when val is null
+		if(val == null){
+			return null;
+		}
+
+		Node foundNode = findNode(root, null, val);
+
+		if(foundNode == null){
+			return null;
+		}
+		return foundNode;
+	}
+
+	// protected method called by the public findNode method. this method is used to traverse the tree.
+	protected Node findNode(Node n, Node parent, E val){
+		// handle case where the root
+		if(n == null){
+			return null;
+		}
+
+		if(n.value.equals(val)){
+			return n;
+		}
+
+		if(val.compareTo(n.value) < 0){
+
+			if(n.leftChild == null){
+				return null;
+			}
+			Node foundNode = findNode(n.leftChild, n, val);
+			return foundNode;
+		} else {
+			if(n.rightChild == null){
+				return null;
+			}
+
+			Node foundNode = findNode(n.rightChild, n, val);
+			return foundNode;
+		}
 	}
 	
 	// Method #2.

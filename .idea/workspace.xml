@@ -1,7 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="e37c98c1-a5d0-4b1d-8f22-f3dedd52880e" name="Default Changelist" comment="" />
+    <list default="true" id="e37c98c1-a5d0-4b1d-8f22-f3dedd52880e" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/src/Assignment4/BSTRunner.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Assignment4/BinarySearchTree.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Assignment4/BinarySearchTree.java" afterDir="false" />
+    </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -39,6 +44,11 @@
     <property name="project.structure.side.proportion" value="0.0" />
     <property name="run.code.analysis.last.selected.profile" value="pProject Default" />
   </component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\payne\Desktop\MCIT594\src\Assignment4" />
+    </key>
+  </component>
   <component name="RunDashboard">
     <option name="ruleStates">
       <list>
@@ -51,14 +61,13 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="JUnit.CalculateScoresTest">
-    <configuration name="Analyzer" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="Assignment3.Analyzer" />
+  <component name="RunManager" selected="Application.BSTRunner">
+    <configuration name="BSTRunner" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="Assignment4.BSTRunner" />
       <module name="MCIT594" />
-      <option name="PROGRAM_PARAMETERS" value="C:\Users\cpayne002\Desktop\MCIT\MCIT594\src\Assignment3\reviews2.txt" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="Assignment3.*" />
+          <option name="PATTERN" value="Assignment4.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -127,19 +136,19 @@
       </method>
     </configuration>
     <list>
-      <item itemvalue="Application.Analyzer" />
       <item itemvalue="JUnit.AllWordsTest" />
       <item itemvalue="JUnit.CalculateScoresTest" />
       <item itemvalue="JUnit.CalculateSentenceScoreTest" />
       <item itemvalue="JUnit.ReadFileTest" />
+      <item itemvalue="Application.BSTRunner" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.BSTRunner" />
         <item itemvalue="JUnit.CalculateScoresTest" />
         <item itemvalue="JUnit.CalculateSentenceScoreTest" />
         <item itemvalue="JUnit.AllWordsTest" />
         <item itemvalue="JUnit.ReadFileTest" />
-        <item itemvalue="Application.Analyzer" />
       </list>
     </recent_temporary>
   </component>
@@ -160,6 +169,7 @@
       <workItem from="1579521353432" duration="189000" />
       <workItem from="1582214943576" duration="13601000" />
       <workItem from="1583113467917" duration="116000" />
+      <workItem from="1583113728549" duration="7474000" />
     </task>
     <servers />
   </component>
