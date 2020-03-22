@@ -2,12 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="e37c98c1-a5d0-4b1d-8f22-f3dedd52880e" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/Assignment4/HeightTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/MCIT594/Assignment4/BSTRunner.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/MCIT594/Assignment4/BSTRunner.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/MCIT594/Assignment4/BinarySearchTree.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/MCIT594/Assignment4/BinarySearchTree.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Assignment4/BSTRunner.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Assignment4/BSTRunner.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Assignment4/BinarySearchTree.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Assignment4/BinarySearchTree.java" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
