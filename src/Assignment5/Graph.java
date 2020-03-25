@@ -1,12 +1,6 @@
 package Assignment5;
 
-import java.util.HashMap;
-import java.util.HashSet;
-import java.util.Iterator;
-import java.util.LinkedList;
-import java.util.Map;
-import java.util.Queue;
-import java.util.Set;
+import java.util.*;
 
 public abstract class Graph {
 	protected Map<String, Set<Edge>> adjacencySets;
@@ -100,11 +94,12 @@ public abstract class Graph {
 	public boolean bfs(String start, String elementToFind) {
 		marked.clear();
 		if (!containsNode(start)) {
-				return false;
+			return false;
 		}
 		if (start.equals(elementToFind)) {
 			return true;
 		}
+
 		Queue<String> toExplore = new LinkedList<String>();
 		marked.add(start);
 		toExplore.add(start);

@@ -2,14 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="e37c98c1-a5d0-4b1d-8f22-f3dedd52880e" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/Assignment5/GraphRunner.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Assignment5/IsHamiltonianPathTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Assignment5/MinDistanceTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Assignment5/NodesWithinDistanceTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Assignment5/graph_builder_test.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Assignment5/is_hamiltonian_path_test.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/MCIT594/Assignment5/GraphRunner.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/MCIT594/Assignment5/GraphRunner.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/MCIT594/Assignment5/GraphUtils.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/MCIT594/Assignment5/GraphUtils.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Assignment5/Graph.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Assignment5/Graph.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Assignment5/GraphRunner.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Assignment5/GraphRunner.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Assignment5/GraphUtils.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Assignment5/GraphUtils.java" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -178,7 +175,7 @@
       <workItem from="1582214943576" duration="13601000" />
       <workItem from="1583113467917" duration="116000" />
       <workItem from="1583113728549" duration="11863000" />
-      <workItem from="1584918223547" duration="10949000" />
+      <workItem from="1584918223547" duration="21990000" />
     </task>
     <servers />
   </component>

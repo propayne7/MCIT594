@@ -1,9 +1,6 @@
 package Assignment5;
 
-import java.util.HashSet;
-import java.util.LinkedList;
-import java.util.List;
-import java.util.Set;
+import java.util.*;
 
 public class GraphUtils {
 	
@@ -13,9 +10,16 @@ public class GraphUtils {
 
 	public static int minDistance(Graph graph, String src, String dest) {
 		// check if values passed to method are null and return -1 if true
-		if(graph == null || src.isEmpty() || src == "" || dest.isEmpty() || dest == ""){
+		if(graph == null || src.isEmpty() || src == "" || dest.isEmpty() || dest == "" || !graph.containsNode(src) || !graph.containsNode(dest)){
 			return -1;
 		}
+
+		// implement a modified BFS to get get the distances between nodes
+		int[] distances = new int[graph.getNumNodes()];
+		Arrays.fill(distances, -1);
+
+
+
 
 
 		return 0;

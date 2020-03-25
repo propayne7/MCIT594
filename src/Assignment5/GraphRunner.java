@@ -1,5 +1,7 @@
 package Assignment5;
 
+import java.util.Set;
+
 // class to run the graph class provided and created for this assignment
 // !!!!! DO NOT INCLUDE THIS IN YOUR SUBMISSION !!!!!
 public class GraphRunner {
@@ -15,7 +17,9 @@ public class GraphRunner {
         // create an undirected graph using the test txt file
         DirectedGraph directedGraph = builder.buildDirectedGraph("C:\\Users\\payne\\Desktop\\MCIT594\\src\\Assignment5\\graph_builder_test.txt");
 
-        System.out.println(utils.minDistance(undirectedGraph,"a", "b"));
+        utils.minDistance(undirectedGraph, "0", "4");
+
+
 
     }
 }
