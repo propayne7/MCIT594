@@ -12,6 +12,12 @@ public class GraphUtils {
 	 */
 
 	public static int minDistance(Graph graph, String src, String dest) {
+		// check if values passed to method are null and return -1 if true
+		if(graph == null || src.isEmpty() || src == "" || dest.isEmpty() || dest == ""){
+			return -1;
+		}
+
+
 		return 0;
 	}
 

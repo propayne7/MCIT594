@@ -2,8 +2,15 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="e37c98c1-a5d0-4b1d-8f22-f3dedd52880e" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/src/Assignment5/GraphRunner.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Assignment5/IsHamiltonianPathTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Assignment5/MinDistanceTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Assignment5/NodesWithinDistanceTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Assignment5/graph_builder_test.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Assignment5/is_hamiltonian_path_test.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Assignment5/Graph.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Assignment5/Graph.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/MCIT594/Assignment5/GraphUtils.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/MCIT594/Assignment5/GraphUtils.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Assignment5/GraphUtils.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Assignment5/GraphUtils.java" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -30,6 +37,7 @@
     <property name="Repository.Attach.Sources" value="false" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/Assignment5" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
@@ -43,7 +51,11 @@
     <property name="run.code.analysis.last.selected.profile" value="pProject Default" />
   </component>
   <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\payne\Desktop\MCIT594\src\Assignment5" />
+    </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\payne\Desktop\MCIT594\src\Assignment5" />
       <recent name="C:\Users\payne\Desktop\MCIT594\src\Assignment4" />
     </key>
   </component>
@@ -59,7 +71,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="JUnit.HeightTest">
+  <component name="RunManager" selected="Application.GraphRunner">
     <configuration name="BSTRunner" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="Assignment4.BSTRunner" />
       <module name="MCIT594" />
@@ -73,17 +85,15 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="AllWordsTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="GraphRunner" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="Assignment5.GraphRunner" />
       <module name="MCIT594" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="Assignment3.*" />
+          <option name="PATTERN" value="Assignment5.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="Assignment3" />
-      <option name="MAIN_CLASS_NAME" value="Assignment3.AllWordsTest" />
-      <option name="TEST_OBJECT" value="class" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -135,18 +145,18 @@
     </configuration>
     <list>
       <item itemvalue="Application.BSTRunner" />
-      <item itemvalue="JUnit.AllWordsTest" />
       <item itemvalue="JUnit.CalculateScoresTest" />
       <item itemvalue="JUnit.CalculateSentenceScoreTest" />
       <item itemvalue="JUnit.HeightTest" />
+      <item itemvalue="Application.GraphRunner" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.GraphRunner" />
         <item itemvalue="JUnit.HeightTest" />
         <item itemvalue="Application.BSTRunner" />
         <item itemvalue="JUnit.CalculateScoresTest" />
         <item itemvalue="JUnit.CalculateSentenceScoreTest" />
-        <item itemvalue="JUnit.AllWordsTest" />
       </list>
     </recent_temporary>
   </component>
@@ -168,7 +178,7 @@
       <workItem from="1582214943576" duration="13601000" />
       <workItem from="1583113467917" duration="116000" />
       <workItem from="1583113728549" duration="11863000" />
-      <workItem from="1584918223547" duration="4002000" />
+      <workItem from="1584918223547" duration="10949000" />
     </task>
     <servers />
   </component>
