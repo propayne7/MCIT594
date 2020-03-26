@@ -6,7 +6,7 @@ import org.junit.Before;
 
 public class MinDistanceTest
 {
-    public static final String FILENAME = "graph_builder_test.txt";
+    public static final String FILENAME = "C:\\Users\\payne\\Desktop\\MCIT594\\src\\Assignment5\\graph_builder_test.txt";
 
     @Before
     public void setUp() throws Exception {
@@ -14,7 +14,7 @@ public class MinDistanceTest
 
     @Test
     public void testSrcDestConnectedUndirected() {
-        final UndirectedGraph buildUndirectedGraph = GraphBuilder.buildUndirectedGraph("graph_builder_test.txt");
+        final UndirectedGraph buildUndirectedGraph = GraphBuilder.buildUndirectedGraph(FILENAME);
         try {
             Assert.assertTrue("minDistance returns incorrect value when src and dest are connected by a single edge in an undirected graph", GraphUtils.minDistance((Graph)buildUndirectedGraph, "1", "2") == 1);
         }
@@ -25,7 +25,7 @@ public class MinDistanceTest
 
     @Test
     public void testSrcDestConnectedDirected() {
-        final DirectedGraph buildDirectedGraph = GraphBuilder.buildDirectedGraph("graph_builder_test.txt");
+        final DirectedGraph buildDirectedGraph = GraphBuilder.buildDirectedGraph(FILENAME);
         try {
             Assert.assertTrue("minDistance returns incorrect value when src and dest are connected by a single edge in a directed graph", GraphUtils.minDistance((Graph)buildDirectedGraph, "1", "2") == 1);
         }

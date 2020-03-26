@@ -3,11 +3,13 @@
   <component name="ChangeListManager">
     <list default="true" id="e37c98c1-a5d0-4b1d-8f22-f3dedd52880e" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/MCIT594/Assignment5/Graph.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/MCIT594/Assignment5/Graph.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/MCIT594/Assignment5/GraphRunner.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/MCIT594/Assignment5/GraphRunner.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/MCIT594/Assignment5/GraphUtils.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/MCIT594/Assignment5/GraphUtils.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Assignment5/Graph.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Assignment5/Graph.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/MCIT594/Assignment5/MinDistanceTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/MCIT594/Assignment5/MinDistanceTest.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Assignment5/GraphRunner.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Assignment5/GraphRunner.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Assignment5/GraphUtils.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Assignment5/GraphUtils.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Assignment5/MinDistanceTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Assignment5/MinDistanceTest.java" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -69,19 +71,6 @@
     </option>
   </component>
   <component name="RunManager" selected="Application.GraphRunner">
-    <configuration name="BSTRunner" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="Assignment4.BSTRunner" />
-      <module name="MCIT594" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="Assignment4.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
     <configuration name="GraphRunner" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="Assignment5.GraphRunner" />
       <module name="MCIT594" />
@@ -110,21 +99,6 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="CalculateSentenceScoreTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="MCIT594" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="Assignment3.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="Assignment3" />
-      <option name="MAIN_CLASS_NAME" value="Assignment3.CalculateSentenceScoreTest" />
-      <option name="TEST_OBJECT" value="class" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
     <configuration name="HeightTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="MCIT594" />
       <extension name="coverage">
@@ -140,20 +114,33 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="MinDistanceTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="MCIT594" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="Assignment5.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="Assignment5" />
+      <option name="MAIN_CLASS_NAME" value="Assignment5.MinDistanceTest" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <list>
-      <item itemvalue="Application.BSTRunner" />
-      <item itemvalue="JUnit.CalculateScoresTest" />
-      <item itemvalue="JUnit.CalculateSentenceScoreTest" />
-      <item itemvalue="JUnit.HeightTest" />
       <item itemvalue="Application.GraphRunner" />
+      <item itemvalue="JUnit.CalculateScoresTest" />
+      <item itemvalue="JUnit.HeightTest" />
+      <item itemvalue="JUnit.MinDistanceTest" />
     </list>
     <recent_temporary>
       <list>
         <item itemvalue="Application.GraphRunner" />
+        <item itemvalue="JUnit.MinDistanceTest" />
         <item itemvalue="JUnit.HeightTest" />
-        <item itemvalue="Application.BSTRunner" />
         <item itemvalue="JUnit.CalculateScoresTest" />
-        <item itemvalue="JUnit.CalculateSentenceScoreTest" />
       </list>
     </recent_temporary>
   </component>
@@ -175,7 +162,7 @@
       <workItem from="1582214943576" duration="13601000" />
       <workItem from="1583113467917" duration="116000" />
       <workItem from="1583113728549" duration="11863000" />
-      <workItem from="1584918223547" duration="21990000" />
+      <workItem from="1584918223547" duration="36610000" />
     </task>
     <servers />
   </component>
