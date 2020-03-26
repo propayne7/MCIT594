@@ -25,8 +25,6 @@ public class GraphUtils {
 
 		Set<String> marked = new HashSet<>();
 		Queue<String> toExplore = new LinkedList<String>();
-		int[] distances = new int[graph.getNumNodes()];
-		Arrays.fill(distances, -1);
 
 		marked.add(src);
 		toExplore.add(src);
