@@ -7,7 +7,7 @@ import org.junit.Before;
 
 public class NodesWithinDistanceTest
 {
-    public static final String FILENAME = "graph_builder_test.txt";
+    public static final String FILENAME = "C:\\Users\\payne\\Desktop\\MCIT594\\src\\Assignment5\\graph_builder_test.txt";
 
     @Before
     public void setUp() throws Exception {
@@ -15,7 +15,7 @@ public class NodesWithinDistanceTest
 
     @Test
     public void testDistance1Undirected() {
-        final UndirectedGraph buildUndirectedGraph = GraphBuilder.buildUndirectedGraph("graph_builder_test.txt");
+        final UndirectedGraph buildUndirectedGraph = GraphBuilder.buildUndirectedGraph("C:\\Users\\payne\\Desktop\\MCIT594\\src\\Assignment5\\graph_builder_test.txt");
         try {
             final Set nodesWithinDistance = GraphUtils.nodesWithinDistance((Graph)buildUndirectedGraph, "0", 1);
             Assert.assertNotNull("nodesWithinDistance returns returns incorrect value when distance = 1 in undirected graph", (Object)nodesWithinDistance);
@@ -32,7 +32,7 @@ public class NodesWithinDistanceTest
 
     @Test
     public void testDistance1Directed() {
-        final DirectedGraph buildDirectedGraph = GraphBuilder.buildDirectedGraph("graph_builder_test.txt");
+        final DirectedGraph buildDirectedGraph = GraphBuilder.buildDirectedGraph("C:\\Users\\payne\\Desktop\\MCIT594\\src\\Assignment5\\graph_builder_test.txt");
         try {
             final Set nodesWithinDistance = GraphUtils.nodesWithinDistance((Graph)buildDirectedGraph, "1", 1);
             Assert.assertNotNull("nodesWithinDistance returns incorrect value when distance = 1 in directed graph", (Object)nodesWithinDistance);

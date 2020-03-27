@@ -17,14 +17,12 @@ public class GraphRunner {
         // create an undirected graph using the test txt file
         DirectedGraph directedGraph = GraphBuilder.buildDirectedGraph("C:\\Users\\payne\\Desktop\\MCIT594\\src\\Assignment5\\graph_builder_test.txt");
 
-        System.out.println("Minimum distance from 1 to 2: ");
-        System.out.println(utils.minDistance(directedGraph, "1", "2"));
+        System.out.println("Nodes within distance of 1 from node 1: ");
+        System.out.println(utils.nodesWithinDistance(directedGraph, "1", 1));
         System.out.println();
 
-
-        System.out.println("Minimum distance from 0 to 6: ");
-        System.out.println(utils.minDistance(directedGraph, "0", "6"));
+        System.out.println("Nodes within distance of 3 from node 2: ");
+        System.out.println(utils.nodesWithinDistance(undirectedGraph, "1", 3));
         System.out.println();
-
     }
 }

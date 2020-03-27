@@ -81,9 +81,6 @@ public class GraphUtils {
 		while (!toExplore.isEmpty()) {
 			String current = toExplore.remove();
 			for (String neighbor : graph.getNodeNeighbors(current)) {
-				System.out.println("Current Node: " + current);
-				System.out.println("Neighbors: " + graph.getNodeNeighbors(current));
-				System.out.println();
 				int nodeDistance = nodesWithDistances.get(neighbor);
 				nodesWithDistances.put(neighbor, nodeDistance + 1);
 				if (!marked.contains(neighbor)) {
@@ -100,11 +97,89 @@ public class GraphUtils {
 	}
 
 	public static Set<String> nodesWithinDistance(Graph graph, String src, int distance) {
-		return null;
+		if(graph == null || src.isEmpty() || src == "" || !graph.containsNode(src)){
+			return null;
+		}
+
+		Map<String, Integer> nodesWithDistances = nodesWithinDistanceSuppl(graph, src, distance);
+		Set<String> nodes = new HashSet<>();
+
+		for(String s : nodesWithDistances.keySet()){
+			if(nodesWithDistances.get(s) <= distance && nodesWithDistances.get(s) != 0){
+				nodes.add(s);
+			}
+		}
+
+		if(nodes.contains(src) && nodes.size() == 1){
+			nodes.remove(src);
+		}
+
+		return nodes;
+	}
+
+	public static Map<String, Integer> nodesWithinDistanceSuppl(Graph graph, String src, int distance) {
+
+		// create a hashmap with the nodes as the key and distances from src as the value;
+		Map<String, Integer> nodesWithDistances = new HashMap<>();
+		// populate all values in hashmap with -1 as a default value
+		// note that if any value is -1 after the modified BFS below completes, this means the node was not reachable from the src node
+		for(String s : graph.getAllNodes()){
+			nodesWithDistances.put(s, 0);
+		}
+		// hashset to
+		Set<String> marked = new HashSet<>();
+		Queue<String> toExplore = new LinkedList<String>();
+
+		marked.add(src);
+		toExplore.add(src);
+		// mark distance from src to itself as 0
+		nodesWithDistances.put(src, 0);
+
+		int lvl = -1;
+
+		while (!toExplore.isEmpty()) {
+			lvl++;
+			if(lvl == distance){
+				break;
+			}
+			String current = toExplore.remove();
+			for (String neighbor : graph.getNodeNeighbors(current)) {
+				int nodeDistance = nodesWithDistances.get(neighbor);
+				nodesWithDistances.put(neighbor, nodeDistance + 1);
+				if (!marked.contains(neighbor)) {
+					marked.add(neighbor);
+					toExplore.add(neighbor);
+				}
+			}
+		}
+		return nodesWithDistances;
 	}
 
 	public static boolean isHamiltonianPath(Graph g, List<String> values) {
-		return false;
+		if(g == null || values == null){
+			return false;
+		}
+
+		// check start and end point are the same
+		String head = values.get(0);
+		String tail = values.get(values.size() - 1);
+
+		boolean finalAnswer = false;
+
+		if(head != tail){
+			return false;
+		}
+
+		for(int i = 0; i < values.size() - 1; i++){
+			String node = values.get(i);
+			String nextNode = values.get(i+1);
+			Set<String> neighbors = g.getNodeNeighbors(node);
+			if(neighbors.contains(nextNode)){
+				finalAnswer = true;
+			}
+		}
+
+		return finalAnswer;
 	}
 	
 }

@@ -5,8 +5,12 @@
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/MCIT594/Assignment5/GraphRunner.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/MCIT594/Assignment5/GraphRunner.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/MCIT594/Assignment5/GraphUtils.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/MCIT594/Assignment5/GraphUtils.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/MCIT594/Assignment5/IsHamiltonianPathTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/MCIT594/Assignment5/IsHamiltonianPathTest.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/MCIT594/Assignment5/NodesWithinDistanceTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/MCIT594/Assignment5/NodesWithinDistanceTest.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Assignment5/GraphRunner.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Assignment5/GraphRunner.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Assignment5/GraphUtils.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Assignment5/GraphUtils.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Assignment5/IsHamiltonianPathTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Assignment5/IsHamiltonianPathTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Assignment5/NodesWithinDistanceTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Assignment5/NodesWithinDistanceTest.java" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -67,7 +71,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="JUnit.MinDistanceTest">
+  <component name="RunManager" selected="JUnit.IsHamiltonianPathTest">
     <configuration name="GraphRunner" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="Assignment5.GraphRunner" />
       <module name="MCIT594" />
@@ -77,6 +81,21 @@
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="IsHamiltonianPathTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="MCIT594" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="Assignment5.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="Assignment5" />
+      <option name="MAIN_CLASS_NAME" value="Assignment5.IsHamiltonianPathTest" />
+      <option name="TEST_OBJECT" value="class" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -96,14 +115,33 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="NodesWithinDistanceTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="MCIT594" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="Assignment5.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="Assignment5" />
+      <option name="MAIN_CLASS_NAME" value="Assignment5.NodesWithinDistanceTest" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <list>
       <item itemvalue="Application.GraphRunner" />
       <item itemvalue="JUnit.MinDistanceTest" />
+      <item itemvalue="JUnit.NodesWithinDistanceTest" />
+      <item itemvalue="JUnit.IsHamiltonianPathTest" />
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="JUnit.MinDistanceTest" />
+        <item itemvalue="JUnit.IsHamiltonianPathTest" />
+        <item itemvalue="JUnit.NodesWithinDistanceTest" />
         <item itemvalue="Application.GraphRunner" />
+        <item itemvalue="JUnit.MinDistanceTest" />
       </list>
     </recent_temporary>
   </component>
@@ -125,7 +163,7 @@
       <workItem from="1582214943576" duration="13601000" />
       <workItem from="1583113467917" duration="116000" />
       <workItem from="1583113728549" duration="11863000" />
-      <workItem from="1584918223547" duration="41476000" />
+      <workItem from="1584918223547" duration="47588000" />
     </task>
     <servers />
   </component>
