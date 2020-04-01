@@ -1,17 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="e37c98c1-a5d0-4b1d-8f22-f3dedd52880e" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/MCIT594/Assignment5/GraphRunner.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/MCIT594/Assignment5/GraphRunner.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/MCIT594/Assignment5/GraphUtils.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/MCIT594/Assignment5/GraphUtils.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/MCIT594/Assignment5/IsHamiltonianPathTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/MCIT594/Assignment5/IsHamiltonianPathTest.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/MCIT594/Assignment5/NodesWithinDistanceTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/MCIT594/Assignment5/NodesWithinDistanceTest.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Assignment5/GraphRunner.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Assignment5/GraphRunner.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Assignment5/GraphUtils.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Assignment5/GraphUtils.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Assignment5/IsHamiltonianPathTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Assignment5/IsHamiltonianPathTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Assignment5/NodesWithinDistanceTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Assignment5/NodesWithinDistanceTest.java" afterDir="false" />
-    </list>
+    <list default="true" id="e37c98c1-a5d0-4b1d-8f22-f3dedd52880e" name="Default Changelist" comment="" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -164,6 +154,7 @@
       <workItem from="1583113467917" duration="116000" />
       <workItem from="1583113728549" duration="11863000" />
       <workItem from="1584918223547" duration="47588000" />
+      <workItem from="1585779328134" duration="144000" />
     </task>
     <servers />
   </component>
