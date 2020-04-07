@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
+<<<<<<< HEAD
     <list default="true" id="e37c98c1-a5d0-4b1d-8f22-f3dedd52880e" name="Default Changelist" comment="">
       <change afterPath="$PROJECT_DIR$/.idea/libraries/json_simple_1_1_1.xml" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/src/Module11Assignment/TweetRunner.java" afterDir="false" />
@@ -10,6 +11,9 @@
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/MCIT594.iml" beforeDir="false" afterPath="$PROJECT_DIR$/MCIT594.iml" afterDir="false" />
     </list>
+=======
+    <list default="true" id="e37c98c1-a5d0-4b1d-8f22-f3dedd52880e" name="Default Changelist" comment="" />
+>>>>>>> 2de9bdb6788829448fcd156c3583908bc29fe2de
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -164,8 +168,13 @@
       <workItem from="1582214943576" duration="13601000" />
       <workItem from="1583113467917" duration="116000" />
       <workItem from="1583113728549" duration="11863000" />
+<<<<<<< HEAD
       <workItem from="1584918223547" duration="47775000" />
       <workItem from="1586219174240" duration="694000" />
+=======
+      <workItem from="1584918223547" duration="47588000" />
+      <workItem from="1585779328134" duration="144000" />
+>>>>>>> 2de9bdb6788829448fcd156c3583908bc29fe2de
     </task>
     <servers />
   </component>
