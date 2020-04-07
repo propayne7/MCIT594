@@ -1,19 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-<<<<<<< HEAD
     <list default="true" id="e37c98c1-a5d0-4b1d-8f22-f3dedd52880e" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/json_simple_1_1_1.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Module11Assignment/TweetRunner.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Module11Assignment/flu_tweets.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Module11Assignment/flu_tweets.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Module11Assignment/states.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Module11/TweetRunner.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/json_simple_1_1_1.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/json_simple_1_1_1.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/MCIT594.iml" beforeDir="false" afterPath="$PROJECT_DIR$/MCIT594.iml" afterDir="false" />
     </list>
-=======
-    <list default="true" id="e37c98c1-a5d0-4b1d-8f22-f3dedd52880e" name="Default Changelist" comment="" />
->>>>>>> 2de9bdb6788829448fcd156c3583908bc29fe2de
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -37,7 +29,6 @@
     <property name="Repository.Attach.Annotations" value="false" />
     <property name="Repository.Attach.JavaDocs" value="false" />
     <property name="Repository.Attach.Sources" value="false" />
-    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
     <property name="last_opened_file_path" value="$USER_HOME$/Downloads/json-simple-1.1.1.jar!/" />
@@ -49,19 +40,17 @@
     <property name="node.js.selected.package.tslint" value="(autodetect)" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="project.structure.last.edited" value="Libraries" />
-    <property name="project.structure.proportion" value="0.0" />
-    <property name="project.structure.side.proportion" value="0.0" />
+    <property name="project.structure.proportion" value="0.15" />
+    <property name="project.structure.side.proportion" value="0.2" />
     <property name="run.code.analysis.last.selected.profile" value="pProject Default" />
   </component>
   <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\payne\Desktop\MCIT594\src\Assignment5" />
+    </key>
     <key name="MoveFile.RECENT_KEYS">
-      <recent name="C:\Users\payne\Desktop\MCIT594\src\Module11Assignment" />
       <recent name="C:\Users\payne\Desktop\MCIT594\src\Assignment5" />
       <recent name="C:\Users\payne\Desktop\MCIT594\src\Assignment4" />
-    </key>
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="C:\Users\payne\Desktop\MCIT594\src\Module11Assignment" />
-      <recent name="C:\Users\payne\Desktop\MCIT594\src\Assignment5" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -76,13 +65,13 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="JUnit.IsHamiltonianPathTest">
-    <configuration name="GraphRunner" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="Assignment5.GraphRunner" />
+  <component name="RunManager">
+    <configuration name="TweetRunner" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="Module11.TweetRunner" />
       <module name="MCIT594" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="Assignment5.*" />
+          <option name="PATTERN" value="Module11.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -90,63 +79,9 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="IsHamiltonianPathTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="MCIT594" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="Assignment5.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="Assignment5" />
-      <option name="MAIN_CLASS_NAME" value="Assignment5.IsHamiltonianPathTest" />
-      <option name="TEST_OBJECT" value="class" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="MinDistanceTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="MCIT594" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="Assignment5.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="Assignment5" />
-      <option name="MAIN_CLASS_NAME" value="Assignment5.MinDistanceTest" />
-      <option name="TEST_OBJECT" value="class" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="NodesWithinDistanceTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="MCIT594" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="Assignment5.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="Assignment5" />
-      <option name="MAIN_CLASS_NAME" value="Assignment5.NodesWithinDistanceTest" />
-      <option name="TEST_OBJECT" value="class" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <list>
-      <item itemvalue="Application.GraphRunner" />
-      <item itemvalue="JUnit.MinDistanceTest" />
-      <item itemvalue="JUnit.NodesWithinDistanceTest" />
-      <item itemvalue="JUnit.IsHamiltonianPathTest" />
-    </list>
     <recent_temporary>
       <list>
-        <item itemvalue="JUnit.IsHamiltonianPathTest" />
-        <item itemvalue="JUnit.NodesWithinDistanceTest" />
-        <item itemvalue="Application.GraphRunner" />
-        <item itemvalue="JUnit.MinDistanceTest" />
+        <item itemvalue="Application.TweetRunner" />
       </list>
     </recent_temporary>
   </component>
@@ -168,13 +103,9 @@
       <workItem from="1582214943576" duration="13601000" />
       <workItem from="1583113467917" duration="116000" />
       <workItem from="1583113728549" duration="11863000" />
-<<<<<<< HEAD
-      <workItem from="1584918223547" duration="47775000" />
-      <workItem from="1586219174240" duration="694000" />
-=======
       <workItem from="1584918223547" duration="47588000" />
       <workItem from="1585779328134" duration="144000" />
->>>>>>> 2de9bdb6788829448fcd156c3583908bc29fe2de
+      <workItem from="1586263389996" duration="102000" />
     </task>
     <servers />
   </component>
