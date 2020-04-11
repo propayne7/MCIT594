@@ -2,7 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="e37c98c1-a5d0-4b1d-8f22-f3dedd52880e" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/Module11/flu_tweets.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Module11/FileInput.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Module11/flu_tweets.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/MCIT594/Module11/TweetRunner.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/MCIT594/Module11/TweetRunner.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Module11/TweetRunner.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Module11/TweetRunner.java" afterDir="false" />
@@ -47,6 +48,7 @@
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\payne\Desktop\MCIT594\src\Module11" />
       <recent name="C:\Users\payne\Desktop\MCIT594\src\Assignment5" />
       <recent name="C:\Users\payne\Desktop\MCIT594\src\Assignment4" />
     </key>
@@ -107,7 +109,7 @@
       <workItem from="1583113728549" duration="11863000" />
       <workItem from="1584918223547" duration="47588000" />
       <workItem from="1585779328134" duration="144000" />
-      <workItem from="1586263389996" duration="706000" />
+      <workItem from="1586263389996" duration="4728000" />
     </task>
     <servers />
   </component>
