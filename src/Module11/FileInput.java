@@ -8,6 +8,7 @@ import java.io.BufferedReader;
 import java.io.FileNotFoundException;
 import java.io.FileReader;
 import java.io.IOException;
+import java.util.ArrayList;
 import java.util.Date;
 
 public class FileInput {
@@ -45,20 +46,26 @@ public class FileInput {
         }
     }
 
-    public JSONArray tabDelimitedInput(String filName) throws IOException, ParseException {
+    public ArrayList<JSONCreateObject> tabDelimitedInput(String filName) throws IOException, ParseException {
         BufferedReader reader = new BufferedReader(new FileReader("C:\\Users\\payne\\Desktop\\MCIT594\\src\\Module11\\flu_tweets.txt"));
-        JSONArray tweetArray = new JSONArray();
-        JSONCreateObject obj = new JSONCreateObject();
+        ArrayList<JSONCreateObject> tweetArray = new ArrayList<>();
+
 
         while (reader.read() != -1) {
+            JSONCreateObject obj = new JSONCreateObject();
             String currentTweet = reader.readLine();
             String[] currentTweetArray = currentTweet.split("\t");
             JSONParser parser = new JSONParser();
             obj.coordinates = currentTweetArray[0];
             obj.identifier = currentTweetArray[1];
-            obj.tweetText = currentTweetArray[2];
-            obj.date = currentTweetArray[3];
+            obj.date = currentTweetArray[2];
+            obj.tweetText = currentTweetArray[3];
             tweetArray.add(obj);
+        }
+
+        for(JSONCreateObject o : tweetArray){
+            System.out.println(o.coordinates);
+            System.out.println(o.tweetText);
         }
 
         return tweetArray;
