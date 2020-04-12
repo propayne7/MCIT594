@@ -2,10 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="e37c98c1-a5d0-4b1d-8f22-f3dedd52880e" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/edu/upenn/cit594/CLIArgsErrorHandling.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/edu/upenn/cit594/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/edu/upenn/cit594/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/edu/upenn/cit594/processor/FileInput.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/edu/upenn/cit594/processor/FileInput.java" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -117,7 +115,7 @@
       <workItem from="1583113728549" duration="11863000" />
       <workItem from="1584918223547" duration="47588000" />
       <workItem from="1585779328134" duration="144000" />
-      <workItem from="1586263389996" duration="15884000" />
+      <workItem from="1586263389996" duration="16009000" />
     </task>
     <servers />
   </component>
