@@ -118,4 +118,12 @@ public class FileInput {
         }
         return tweetArray;
     }
+
+    /***
+     * START HERE on 4/13 --> get state data loaded in. need to think of the following:
+     *  - data structure to hold states
+     *  - how to compare state longitude and latitude with tweets
+     */
+
+
 }
