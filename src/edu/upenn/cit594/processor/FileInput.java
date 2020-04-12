@@ -14,6 +14,11 @@ public class FileInput {
 
     public FileInput(String fileType, String fileName) throws IOException, ParseException {
         // handle file type input
+
+        /**
+         * FOR 4/12/2020 -- SHOULD YOU REPLACE THE FILETYPE ARGUMENTS HERE WITH THE MAINARGS DATA, OR SHOULD THESE COME
+         * PASSED IN FROM OTHER CLASSES?
+         */
         String inputFormat = fileType;
         boolean jsonFileInput = inputFormat.matches("(?i)(json)");
         boolean textFileInput = inputFormat.matches("(?i)(text)") || inputFormat.matches("(?i)(txt)");

@@ -2,15 +2,15 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="e37c98c1-a5d0-4b1d-8f22-f3dedd52880e" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/edu/upenn/cit594/data/MainArgs.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/edu/upenn/cit594/datamanagement/CleanedTweets.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/MCIT594/edu/upenn/cit594/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/MCIT594/edu/upenn/cit594/Main.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/MCIT594/edu/upenn/cit594/data/MainArgs.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/MCIT594/edu/upenn/cit594/data/MainArgs.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/MCIT594/edu/upenn/cit594/logging/Log.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/MCIT594/edu/upenn/cit594/logging/Log.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/MCIT594/edu/upenn/cit594/processor/FileInput$JSONCreateObject.class" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/MCIT594/edu/upenn/cit594/processor/FileInput.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/MCIT594/edu/upenn/cit594/processor/FileInput.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/edu/upenn/cit594/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/edu/upenn/cit594/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/edu/upenn/cit594/data/MainArgs.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/edu/upenn/cit594/datamanagement/MainArgs.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/edu/upenn/cit594/logging/Log.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/edu/upenn/cit594/logging/Log.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/edu/upenn/cit594/processor/FileInput.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/edu/upenn/cit594/processor/FileInput.java" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -86,7 +86,7 @@
     <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="edu.upenn.cit594.Main" />
       <module name="MCIT594" />
-      <option name="PROGRAM_PARAMETERS" value="tweetFileType tweetFileName stateFileName logFileName" />
+      <option name="PROGRAM_PARAMETERS" value="tweetFileType tweetFileName stateFileName logFileName.txt" />
       <extension name="coverage">
         <pattern>
           <option name="PATTERN" value="edu.upenn.cit594.*" />
@@ -123,7 +123,7 @@
       <workItem from="1583113728549" duration="11863000" />
       <workItem from="1584918223547" duration="47588000" />
       <workItem from="1585779328134" duration="144000" />
-      <workItem from="1586263389996" duration="17067000" />
+      <workItem from="1586263389996" duration="23446000" />
     </task>
     <servers />
   </component>

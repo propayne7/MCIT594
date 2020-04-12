@@ -1,4 +1,4 @@
-package edu.upenn.cit594.data;
+package edu.upenn.cit594.datamanagement;
 
 /**
  * This class creates a final object named MainArgs.
@@ -6,22 +6,26 @@ package edu.upenn.cit594.data;
  * being the args that were passed as CLI arguments.
  */
 
-public final class MainArgs {
+public final class  MainArgs {
     private static MainArgs instance;
-
+    private static String[] arguments;
     private String tweetFileType;
     private String tweetFileName;
     private String stateFileName;
     private String logFileName;
 
     public MainArgs(String[] args){
-        setTweetFileType(args[0]);
-        setTweetFileName(args[1]);
-        setStateFileName(args[2]);
-        setLogFileName(args[3]);
+        arguments = args;
+        setTweetFileType(arguments[0]);
+        setTweetFileName(arguments[1]);
+        setStateFileName(arguments[2]);
+        setLogFileName(arguments[3]);
     }
 
     public static MainArgs getInstance(){
+        if(instance == null){
+            instance = new MainArgs(arguments);
+        }
         return instance;
     }
 
