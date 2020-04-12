@@ -2,21 +2,26 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="e37c98c1-a5d0-4b1d-8f22-f3dedd52880e" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/edu/upenn/cit594/Main.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/edu/upenn/cit594/data/states.csv" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/edu/upenn/cit594/logging/Log.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/edu/upenn/cit594/processor/TextInputObj.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/MCIT594/Module11/FileInput.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/MCIT594/Module11/FileInput.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Module11/FileInput.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/edu/upenn/cit594/datamanagement/FileInput.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Module11/TweetRunner.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Module11/flu_tweets.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/edu/upenn/cit594/data/flu_tweets.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Module11/flu_tweets.txt" beforeDir="false" afterPath="$PROJECT_DIR$/src/edu/upenn/cit594/data/flu_tweets.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/MCIT594/Module11/FileInput$1.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/MCIT594/Module11/FileInput$JSONCreateObject.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/MCIT594/Module11/FileInput.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/MCIT594/Module11/TweetRunner.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/MCIT594/Module11/flu_tweets.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/MCIT594/Module11/flu_tweets.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/edu/upenn/cit594/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/edu/upenn/cit594/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/edu/upenn/cit594/datamanagement/FileInput.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/edu/upenn/cit594/processor/FileInput.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/edu/upenn/cit594/logging/Log.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/edu/upenn/cit594/logging/Log.java" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FavoritesManager">
+    <favorites_list name="MCIT594" />
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
@@ -80,12 +85,12 @@
     </option>
   </component>
   <component name="RunManager">
-    <configuration name="TweetRunner" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="Module11.TweetRunner" />
+    <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="edu.upenn.cit594.Main" />
       <module name="MCIT594" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="edu.upenn.cit594.logging.*" />
+          <option name="PATTERN" value="edu.upenn.cit594.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -95,7 +100,7 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Application.TweetRunner" />
+        <item itemvalue="Application.Main" />
       </list>
     </recent_temporary>
   </component>
@@ -119,7 +124,7 @@
       <workItem from="1583113728549" duration="11863000" />
       <workItem from="1584918223547" duration="47588000" />
       <workItem from="1585779328134" duration="144000" />
-      <workItem from="1586263389996" duration="8647000" />
+      <workItem from="1586263389996" duration="14828000" />
     </task>
     <servers />
   </component>

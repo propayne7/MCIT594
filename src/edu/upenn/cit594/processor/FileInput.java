@@ -1,6 +1,7 @@
-package edu.upenn.cit594.datamanagement;
+package edu.upenn.cit594.processor;
 
 import org.json.simple.JSONArray;
+import org.json.simple.JSONObject;
 import org.json.simple.parser.JSONParser;
 import org.json.simple.parser.ParseException;
 
@@ -8,14 +9,26 @@ import java.io.BufferedReader;
 import java.io.FileReader;
 import java.io.IOException;
 import java.util.ArrayList;
-
+import java.util.regex.*;
 public class FileInput {
+
+    public FileInput(String[] args) throws IOException, ParseException {
+        // handle file type input
+        String inputFormat = args[0];
+        if(inputFormat.matches("(?i)(json)")){
+            getJSONTweets(args[1]);
+        }
+        if(inputFormat.matches("(?i)(txt)") || inputFormat.matches("(?i)(text)")){
+            tabDelimitedInput(args[1]);
+        }
+
+    }
 
     public JSONArray getJSONTweets(String fileName) throws IOException, ParseException {
         // create a new JSONParser to pull in the JSON file
         JSONParser parser = new JSONParser();
         // add tweets from JSON file to JSONArray
-        JSONArray tweets = (JSONArray) parser.parse(new FileReader("C:\\Users\\payne\\Desktop\\MCIT594\\src\\Module11\\flu_tweets.json"));
+        JSONArray tweets = (JSONArray) parser.parse(new FileReader(fileName));
         // return tweets (JSONArray)
         return tweets;
     }
@@ -26,16 +39,16 @@ public class FileInput {
         String identifier;
         String date;
         String tweetText;
+    }
 
-    public ArrayList<JSONCreateObject> tabDelimitedInput(String filName) throws IOException, ParseException {
-        BufferedReader reader = new BufferedReader(new FileReader("C:\\Users\\payne\\Desktop\\MCIT594\\src\\Module11\\flu_tweets.txt"));
-        ArrayList<JSONCreateObject> tweetArray = new ArrayList<>();
+    public ArrayList<TextInputObj> tabDelimitedInput(String fileName) throws IOException, ParseException {
+        BufferedReader reader = new BufferedReader(new FileReader(fileName));
+        ArrayList<TextInputObj> tweetArray = new ArrayList<>();
 
 
         while (reader.readLine() != null) {
-            JSONCreateObject obj = new JSONCreateObject();
+            TextInputObj obj = new TextInputObj();
             String currentTweet = reader.readLine();
-            System.out.println("Current text: " + currentTweet);
             String[] currentTweetArray = currentTweet.split("\t");
             JSONParser parser = new JSONParser();
             obj.coordinates = currentTweetArray[0];
@@ -45,28 +58,10 @@ public class FileInput {
             tweetArray.add(obj);
         }
 
-        for(JSONCreateObject o : tweetArray){
-            System.out.println(o.coordinates);
-            System.out.println(o.tweetText);
-        }
+//        for(TextInputObj o : tweetArray){
+//            System.out.println(o.coordinates + ", " + o.tweetText);
+//        }
 
         return tweetArray;
-    }
-
-        public String getCoordinates() {
-            return coordinates;
-        }
-
-        public String getDate() {
-            return date;
-        }
-
-        public String getTweetText() {
-            return tweetText;
-        }
-
-        public String getIdentifier() {
-            return identifier;
-        }
     }
 }
