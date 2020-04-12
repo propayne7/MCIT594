@@ -110,10 +110,10 @@ public class FileInput {
             String currentTweet = reader.readLine();
             String[] currentTweetArray = currentTweet.split("\t");
             JSONParser parser = new JSONParser();
-            obj.coordinates = currentTweetArray[0];
-            obj.identifier = currentTweetArray[1];
-            obj.date = currentTweetArray[2];
-            obj.tweetText = currentTweetArray[3];
+            obj.setCoordinates(currentTweetArray[0]);
+            obj.setIdentifier(currentTweetArray[1]);
+            obj.setDate(currentTweetArray[2]);
+            obj.setTweetText(currentTweetArray[3]);
             tweetArray.add(obj);
         }
         return tweetArray;
