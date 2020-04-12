@@ -9,7 +9,8 @@ public class CLIArgsErrorHandling {
     public CLIArgsErrorHandling(String[] args){
         /**** BEGIN ERROR HANDLING OF CLI ARGUMENTS ****/
         // check whether the length of args is 0
-        if(args.length == 0){
+        if(args.length < 4){
+            System.out.println("There were not enough arguments entered. \nArguments required: 4\nArguments entered: "+ args.length);
             System.out.println("The following arguments must be entered (separated by a space) in the command" +
                     " line when running this program: " +
                     "\ntweet file type (text or json)\ntweet file path\nstate file path\nlog file path");

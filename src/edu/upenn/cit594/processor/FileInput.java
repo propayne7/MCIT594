@@ -3,22 +3,21 @@ package edu.upenn.cit594.processor;
 import org.json.simple.JSONArray;
 import org.json.simple.parser.JSONParser;
 import org.json.simple.parser.ParseException;
-
-import java.io.BufferedReader;
-import java.io.FileNotFoundException;
-import java.io.FileReader;
-import java.io.IOException;
+import java.io.*;
 import java.util.ArrayList;
 
 public class FileInput {
 
-    public FileInput(String fileType, String fileName) throws IOException, ParseException {
-        // handle file type input
+    public String FileInputCheck(String fileType, String fileName){
+        // check the file type is acceptable (json JSON .json .JSON txt .txt TEXT .TEXT)
+        String proceedWithType = fileTypeCheck(fileType);
+        // check the specified file type matches the extension of the input file name
+        fileTypeMatchesFileExtension(proceedWithType, fileName);
 
-        /**
-         * FOR 4/12/2020 -- SHOULD YOU REPLACE THE FILETYPE ARGUMENTS HERE WITH THE MAINARGS DATA, OR SHOULD THESE COME
-         * PASSED IN FROM OTHER CLASSES?
-         */
+        return proceedWithType;
+    }
+    public String fileTypeCheck(String fileType){
+        // handle file type input
         String inputFormat = fileType;
         boolean jsonFileInput = inputFormat.matches("(?i)(json)");
         boolean textFileInput = inputFormat.matches("(?i)(text)") || inputFormat.matches("(?i)(txt)");
@@ -27,16 +26,33 @@ public class FileInput {
         // if the tweet file type input is incorrect, display a message and exit the program
         if(incorrectInput){
             System.out.println("You entered \"" + inputFormat + "\" as the tweet file input type.\n" +
-                    "this is incorrect. Please check your file input type and try again.");
+                    "This file type is incorrect since it is neither JSON nor text. Please check your file input type and try again.");
             System.exit(0);
         }
 
         if(jsonFileInput){
-            getJSONTweets(fileName);
+            return "JSON";
         }
 
         if(textFileInput){
-            tabDelimitedInput(fileName);
+            return "TEXT";
+        }
+        return null;
+    }
+
+    public void fileTypeMatchesFileExtension(String fileType, String fileName){
+        if(fileType.equals("JSON") && !fileName.matches("(([a-zA-Z0-9\\s_\\\\.\\-\\(\\):])+(.json)$)")){
+            System.out.println("A JSON file type was specified as the input, but the file name does not have a .json file extension.");
+            System.out.println("Please check your inputs and try again.");
+            System.out.println("This program will now exit.");
+            System.exit(0);
+        }
+
+        if(fileType.equals("TEXT") && !fileName.matches("(([a-zA-Z0-9\\\\s_\\\\\\\\.\\\\-\\\\(\\\\):])+(.txt)$)")){
+            System.out.println("A text file type was specified as the input, but the file name does not have a .txt extension.");
+            System.out.println("Please check your inputs and try again.");
+            System.out.println("This program will now exit.");
+            System.exit(0);
         }
 
     }
@@ -46,7 +62,16 @@ public class FileInput {
         FileReader reader = null;
         // error handling to ensure the file is found. If not found, display a message and exit the program.
         try {
-            reader = new FileReader(fileName);
+            // check the file can be read
+            File file = new File(fileName);
+            if(file.canRead()){
+                reader = new FileReader(fileName);
+            } else {
+                System.out.println("The file is not able to be read. Please check the access permissions of the tweet input file.");
+                System.out.println("This program will now exit.");
+                System.exit(0);
+            }
+
         } catch (FileNotFoundException e) {
             System.out.println("File \"" + fileName + "\" was not found. Please check your file name and try again.");
             System.exit(0);
@@ -59,12 +84,20 @@ public class FileInput {
         return tweets;
     }
 
-    public ArrayList<TextInputObj> tabDelimitedInput(String fileName) throws IOException {
+    public ArrayList<TextInputObj> getTabDelimitedTweets(String fileName) throws IOException {
         // create a BufferedReader to read the tab-delimited text file file
         BufferedReader reader = null;
         // error handling to ensure the file is found. If not found, display a message and exit the program.
         try {
-            reader = new BufferedReader(new FileReader(fileName));
+            // check the file can be read
+            File file = new File(fileName);
+            if(file.canRead()){
+                reader = new BufferedReader(new FileReader(fileName));
+            } else {
+                System.out.println("The file is not able to be read. Please check the access permissions of the tweet input file.");
+                System.out.println("This program will now exit.");
+                System.exit(0);
+            }
         } catch (FileNotFoundException e) {
             System.out.println("File \"" + fileName + "\" was not found. Please check your file name and try again.");
             System.exit(0);

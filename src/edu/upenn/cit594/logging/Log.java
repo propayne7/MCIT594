@@ -19,6 +19,16 @@ public class Log {
 
     // create private constructor
     private Log(String fileName){
+        fileName = MainArgs.getInstance().getLogFileName();
+        boolean fileNameTest = MainArgs.getInstance().getLogFileName().matches("(([a-zA-Z0-9\\\\s_\\\\\\\\.\\\\-\\\\(\\\\):])+(.txt)$)");
+
+        if(!fileNameTest){
+            System.out.println("A .txt file must be input for the log file. The fourth CLI argument is " + fileName +
+                    " and does not have \".txt\" as the file extension.\nPlease fix the input and try again.");
+            System.out.println("This program will now exit.");
+            System.exit(0);
+        }
+
         try {
             out = new PrintWriter(new File(fileName));
         } catch (FileNotFoundException e) {
@@ -36,6 +46,11 @@ public class Log {
     // private method to get the filename from MainArgs. This will be used when creating a log file.
     private String getFileName(){
         return MainArgs.getInstance().getLogFileName();
+    }
+
+    public void printToLog(String msg){
+        out.println(msg);
+        out.flush();
     }
 }
 
