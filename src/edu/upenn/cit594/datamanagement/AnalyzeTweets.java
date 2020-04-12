@@ -26,13 +26,13 @@ public class AnalyzeTweets {
         String proceedWithType = io.FileInputCheck(fileType, fileName);
 
         if(proceedWithType.equals("JSON")){
-            tweets = io.getJSONTweets(fileName);
+            HandleJSONTweets handleJSONTweets = new HandleJSONTweets(io.getJSONTweets(fileName));
         }
         if(proceedWithType.equals("TEXT")){
             tweets = io.getTabDelimitedTweets(fileName);
         }
 
-        System.out.println(tweets.getClass());
+//        System.out.println(tweets.getClass());
 
     }
 
