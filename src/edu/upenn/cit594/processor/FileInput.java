@@ -1,10 +1,14 @@
 package edu.upenn.cit594.processor;
 
+import edu.upenn.cit594.datamanagement.StateObj;
+import edu.upenn.cit594.datamanagement.TextInputObj;
 import org.json.simple.JSONArray;
 import org.json.simple.parser.JSONParser;
 import org.json.simple.parser.ParseException;
 import java.io.*;
 import java.util.ArrayList;
+import java.util.HashMap;
+
 
 public class FileInput {
 
@@ -109,7 +113,6 @@ public class FileInput {
             TextInputObj obj = new TextInputObj();
             String currentTweet = reader.readLine();
             String[] currentTweetArray = currentTweet.split("\t");
-            JSONParser parser = new JSONParser();
             obj.setCoordinates(currentTweetArray[0]);
             obj.setIdentifier(currentTweetArray[1]);
             obj.setDate(currentTweetArray[2]);
@@ -119,11 +122,44 @@ public class FileInput {
         return tweetArray;
     }
 
-    /***
-     * START HERE on 4/13 --> get state data loaded in. need to think of the following:
-     *  - data structure to hold states
-     *  - how to compare state longitude and latitude with tweets
-     */
+    public HashMap<String, Double[]> processStateData(String stateFileName) throws IOException {
+        HashMap<String, Double[]> stateMap = new HashMap<>();
+        ArrayList<StateObj> stateData = new ArrayList<>();
+        BufferedReader reader = null;
+
+        try {
+            // check the file can be read
+            File file = new File(stateFileName);
+            if(file.canRead()){
+                reader = new BufferedReader(new FileReader(stateFileName));
+            } else {
+                System.out.println("The file is not able to be read. Please check the access permissions of the state data input file.");
+                System.out.println("This program will now exit.");
+                System.exit(0);
+            }
+        } catch (FileNotFoundException e) {
+            System.out.println("File \"" + stateFileName + "\" was not found. Please check your file name and try again.");
+            System.exit(0);
+        }
+
+        String currentState;
+        while ((currentState = reader.readLine()) != null) {
+            String[] currentStateArray = currentState.split(",");
+            Double latitude = Double.parseDouble(currentStateArray[1]);
+            Double longitude = Double.parseDouble(currentStateArray[2]);
+            Double[] coordinates = {latitude,longitude};
+            stateMap.put(currentStateArray[0], coordinates);
+        }
+
+        System.out.println("Printing state data: ");
+        for(StateObj o : stateData){
+            System.out.println("Name: " + o.getName());
+            System.out.println("Latitude: " + o.getLatitude());
+            System.out.println("Longitude: " + o.getLongitude());
+        }
+
+        return stateData;
+    }
 
 
 }

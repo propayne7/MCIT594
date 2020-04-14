@@ -16,11 +16,6 @@ public class HandleJSONTweets {
     public HandleJSONTweets(JSONArray tweets){
         this.tweets = tweets;
         filterFluOnly(tweets);
-
-        for(TextOutputObj o : filteredTweets){
-            System.out.println(o.getCoordinates());
-            System.out.println(o.getTweet());
-        }
     }
 
     public void filterFluOnly(JSONArray tweets) {
@@ -37,5 +32,9 @@ public class HandleJSONTweets {
                 filteredTweets.add(outputObj);
             }
         }
+    }
+
+    public ArrayList<TextOutputObj> getFilteredTweets() {
+        return filteredTweets;
     }
 }

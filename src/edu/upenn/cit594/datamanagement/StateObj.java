@@ -1,4 +1,4 @@
-package edu.upenn.cit594.processor;
+package edu.upenn.cit594.datamanagement;
 
 public class StateObj {
     private String name;

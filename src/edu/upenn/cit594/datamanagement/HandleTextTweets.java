@@ -1,9 +1,5 @@
 package edu.upenn.cit594.datamanagement;
 
-import edu.upenn.cit594.processor.TextInputObj;
-import org.json.simple.JSONArray;
-import org.json.simple.JSONObject;
-
 import java.util.ArrayList;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
@@ -19,8 +15,11 @@ public class HandleTextTweets {
         filterFluOnly(tweets);
     }
 
+    public ArrayList<TextOutputObj> getFilteredTweets() {
+        return filteredTweets;
+    }
+
     public void filterFluOnly(ArrayList<TextInputObj> tweets) {
-        System.out.println("Running the filterFluOnly function:");
         Pattern p = Pattern.compile(pattern);
         for(TextInputObj o : tweets) {
             String tweetText = o.getTweetText();
