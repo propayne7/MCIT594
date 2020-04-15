@@ -6,15 +6,9 @@
       <change beforePath="$PROJECT_DIR$/out/production/MCIT594/edu/upenn/cit594/datamanagement/AnalyzeTweets.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/MCIT594/edu/upenn/cit594/datamanagement/AnalyzeTweets.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/MCIT594/edu/upenn/cit594/datamanagement/HandleJSONTweets.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/MCIT594/edu/upenn/cit594/datamanagement/HandleJSONTweets.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/MCIT594/edu/upenn/cit594/datamanagement/HandleTextTweets.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/MCIT594/edu/upenn/cit594/datamanagement/HandleTextTweets.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/MCIT594/edu/upenn/cit594/datamanagement/TextOutputObj.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/MCIT594/edu/upenn/cit594/datamanagement/TextOutputObj.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/MCIT594/edu/upenn/cit594/processor/FileInput.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/MCIT594/edu/upenn/cit594/processor/FileInput.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/MCIT594/edu/upenn/cit594/processor/TextInputObj.class" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/edu/upenn/cit594/datamanagement/AnalyzeTweets.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/edu/upenn/cit594/datamanagement/AnalyzeTweets.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/edu/upenn/cit594/datamanagement/HandleJSONTweets.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/edu/upenn/cit594/datamanagement/HandleJSONTweets.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/edu/upenn/cit594/datamanagement/HandleTextTweets.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/edu/upenn/cit594/datamanagement/HandleTextTweets.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/edu/upenn/cit594/processor/FileInput.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/edu/upenn/cit594/processor/FileInput.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/edu/upenn/cit594/processor/StateObj.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/edu/upenn/cit594/datamanagement/StateObj.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/edu/upenn/cit594/processor/TextInputObj.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/edu/upenn/cit594/datamanagement/TextInputObj.java" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -127,7 +121,7 @@
       <workItem from="1583113728549" duration="11863000" />
       <workItem from="1584918223547" duration="47588000" />
       <workItem from="1585779328134" duration="144000" />
-      <workItem from="1586263389996" duration="46443000" />
+      <workItem from="1586263389996" duration="48475000" />
     </task>
     <servers />
   </component>

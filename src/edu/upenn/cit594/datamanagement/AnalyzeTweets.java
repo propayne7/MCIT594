@@ -4,6 +4,7 @@ import edu.upenn.cit594.logging.Log;
 import edu.upenn.cit594.processor.FileInput;
 import org.json.simple.parser.ParseException;
 
+import javax.xml.soap.Text;
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.HashMap;
@@ -40,10 +41,41 @@ public class AnalyzeTweets {
 
         // pull in the state data as an HashMap - state name = key, coordinates = value
         stateMap = io.processStateData(stateFileName);
+
+        determineDistances(filteredTweets, stateMap);
     }
 
-    public void calcDist(ArrayList<TextOutputObj> tweets, HashMap<String, Double[]> stateInfo){
-        for()
+    public void determineDistances(ArrayList<TextOutputObj> tweets, HashMap<String, Double[]> stateInfo){
+
+        for(TextOutputObj tweet : tweets){
+            double minDistance = Double.MAX_VALUE;
+            String state = null;
+            for(String s : stateInfo.keySet()){
+                double tweetLatitude = tweet.getCoordinates()[0];
+                double stateLatitude = stateMap.get(s)[0];
+                double tweetLongitude = tweet.getCoordinates()[1];
+                double stateLongitude = stateMap.get(s)[1];
+                double calcDistance = calcDistance(tweetLatitude, stateLatitude, tweetLongitude, stateLongitude);
+
+                if(calcDistance < minDistance){
+                    minDistance = calcDistance;
+                    state = s;
+                }
+
+                System.out.println("Tweet: " + tweet.getTweet());
+                System.out.println("State: " + state +"\n");
+
+            }
+        }
+
+    }
+
+    public double calcDistance(double x1, double x2, double y1, double y2){
+        double xDiffSquared = Math.pow(x2 - x1, 2);
+        double yDiffSquared = Math.pow(y2 - y1, 2);
+        double euclideanDistance = Math.sqrt(xDiffSquared + yDiffSquared);
+
+        return euclideanDistance;
     }
 
 }

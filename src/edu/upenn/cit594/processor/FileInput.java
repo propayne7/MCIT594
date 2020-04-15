@@ -151,14 +151,7 @@ public class FileInput {
             stateMap.put(currentStateArray[0], coordinates);
         }
 
-        System.out.println("Printing state data: ");
-        for(StateObj o : stateData){
-            System.out.println("Name: " + o.getName());
-            System.out.println("Latitude: " + o.getLatitude());
-            System.out.println("Longitude: " + o.getLongitude());
-        }
-
-        return stateData;
+        return stateMap;
     }
 
 
