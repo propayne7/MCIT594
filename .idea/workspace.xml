@@ -2,19 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="e37c98c1-a5d0-4b1d-8f22-f3dedd52880e" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/src/edu/upenn/cit594/ui/Output.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/logFileName.tst" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/logFileName.txt" beforeDir="false" afterPath="$PROJECT_DIR$/logFileName.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/MCIT594/edu/upenn/cit594/datamanagement/AnalyzeTweets.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/MCIT594/edu/upenn/cit594/datamanagement/AnalyzeTweets.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/MCIT594/edu/upenn/cit594/datamanagement/HandleJSONTweets.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/MCIT594/edu/upenn/cit594/datamanagement/HandleJSONTweets.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/MCIT594/edu/upenn/cit594/datamanagement/HandleTextTweets.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/MCIT594/edu/upenn/cit594/datamanagement/HandleTextTweets.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/MCIT594/edu/upenn/cit594/datamanagement/TextInputObj.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/MCIT594/edu/upenn/cit594/datamanagement/TextInputObj.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/MCIT594/edu/upenn/cit594/processor/FileInput.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/MCIT594/edu/upenn/cit594/processor/FileInput.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/edu/upenn/cit594/datamanagement/AnalyzeTweets.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/edu/upenn/cit594/datamanagement/AnalyzeTweets.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/edu/upenn/cit594/datamanagement/HandleJSONTweets.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/edu/upenn/cit594/datamanagement/HandleJSONTweets.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/edu/upenn/cit594/datamanagement/HandleTextTweets.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/edu/upenn/cit594/datamanagement/HandleTextTweets.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/edu/upenn/cit594/datamanagement/TextInputObj.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/edu/upenn/cit594/datamanagement/TextInputObj.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/edu/upenn/cit594/processor/FileInput.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/edu/upenn/cit594/processor/FileInput.java" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -127,7 +118,7 @@
       <workItem from="1583113728549" duration="11863000" />
       <workItem from="1584918223547" duration="47588000" />
       <workItem from="1585779328134" duration="144000" />
-      <workItem from="1586263389996" duration="52419000" />
+      <workItem from="1586263389996" duration="52977000" />
     </task>
     <servers />
   </component>

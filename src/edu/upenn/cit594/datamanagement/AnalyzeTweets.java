@@ -2,6 +2,7 @@ package edu.upenn.cit594.datamanagement;
 
 import edu.upenn.cit594.logging.Log;
 import edu.upenn.cit594.processor.FileInput;
+import edu.upenn.cit594.ui.Output;
 import org.json.simple.parser.ParseException;
 
 import java.io.IOException;
@@ -71,12 +72,8 @@ public class AnalyzeTweets {
             } else{
                 countOfTweetsByState.put(state,1);
             }
-
         }
-        for(String s : countOfTweetsByState.keySet()){
-            System.out.println(s + ": " + countOfTweetsByState.get(s));
-        }
-
+        new Output(countOfTweetsByState);
     }
 
     public double calcDistance(double x1, double x2, double y1, double y2){
