@@ -8,7 +8,7 @@ import java.util.regex.Matcher;
 import java.util.ArrayList;
 
 public class HandleJSONTweets {
-    String pattern = "\\W*(?i)(flu)(?-i)\\W";
+    String pattern = "(((?i)flu\\W)|FLU\\z)";
     JSONArray tweets;
     ArrayList<TextOutputObj> filteredTweets = new ArrayList<>();
     DataMgmt dataMgmt = new DataMgmt();

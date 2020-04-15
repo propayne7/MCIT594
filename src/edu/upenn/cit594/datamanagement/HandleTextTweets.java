@@ -5,7 +5,7 @@ import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
 public class HandleTextTweets {
-    String pattern = "\\W*(?i)(flu)(?-i)\\W";
+    String pattern = "(((?i)flu\\W)|FLU\\z)";
     ArrayList<TextInputObj> tweets = new ArrayList<>();
     ArrayList<TextOutputObj> filteredTweets = new ArrayList<>();
     DataMgmt dataMgmt = new DataMgmt();

@@ -4,10 +4,11 @@ import edu.upenn.cit594.logging.Log;
 import edu.upenn.cit594.processor.FileInput;
 import org.json.simple.parser.ParseException;
 
-import javax.xml.soap.Text;
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.HashMap;
+import java.util.Hashtable;
+import java.util.TreeMap;
 
 /***
  * This class is used to convert the tweet data from strings to the necessary data types to conduct the analysis
@@ -42,10 +43,11 @@ public class AnalyzeTweets {
         // pull in the state data as an HashMap - state name = key, coordinates = value
         stateMap = io.processStateData(stateFileName);
 
-        determineDistances(filteredTweets, stateMap);
+        printToLogAndConsole(filteredTweets, stateMap);
     }
 
-    public void determineDistances(ArrayList<TextOutputObj> tweets, HashMap<String, Double[]> stateInfo){
+    public void printToLogAndConsole(ArrayList<TextOutputObj> tweets, HashMap<String, Double[]> stateInfo){
+        TreeMap<String,Integer> countOfTweetsByState = new TreeMap<>();
 
         for(TextOutputObj tweet : tweets){
             double minDistance = Double.MAX_VALUE;
@@ -61,11 +63,18 @@ public class AnalyzeTweets {
                     minDistance = calcDistance;
                     state = s;
                 }
-
-                System.out.println("Tweet: " + tweet.getTweet());
-                System.out.println("State: " + state +"\n");
-
             }
+            log.printToLog(state + "\t" + tweet.getTweet());
+            if(countOfTweetsByState.containsKey(state)){
+                int currentStateCount = countOfTweetsByState.get(state);
+                countOfTweetsByState.put(state,currentStateCount + 1);
+            } else{
+                countOfTweetsByState.put(state,1);
+            }
+
+        }
+        for(String s : countOfTweetsByState.keySet()){
+            System.out.println(s + ": " + countOfTweetsByState.get(s));
         }
 
     }

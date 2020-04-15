@@ -14,10 +14,6 @@ public class TextInputObj {
         this.coordinates = coordinates;
     }
 
-    public String getIdentifier() {
-        return identifier;
-    }
-
     public void setIdentifier(String identifier) {
         this.identifier = identifier;
     }

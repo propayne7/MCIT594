@@ -108,10 +108,10 @@ public class FileInput {
         }
         ArrayList<TextInputObj> tweetArray = new ArrayList<>();
 
+        String currentTweet;
 
-        while (reader.readLine() != null) {
+        while ((currentTweet = reader.readLine()) != null) {
             TextInputObj obj = new TextInputObj();
-            String currentTweet = reader.readLine();
             String[] currentTweetArray = currentTweet.split("\t");
             obj.setCoordinates(currentTweetArray[0]);
             obj.setIdentifier(currentTweetArray[1]);
@@ -119,6 +119,7 @@ public class FileInput {
             obj.setTweetText(currentTweetArray[3]);
             tweetArray.add(obj);
         }
+
         return tweetArray;
     }
 
